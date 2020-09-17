@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>ТОП СПОРТС - Рекламации</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="ТОП СПОРТС">
+    <meta name="description" content="ТОП СПОРТС">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../js/check_auth.js"></script>
+    <link rel="icon" href="../img/top_sports_logo_black_short_transparency.png">
+    <link rel="stylesheet" type="text/css" href="../css/fonts.css">
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <link rel="stylesheet" type="text/css" href="../css/media_main.css">
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <link rel="stylesheet" type="text/css" href="media_index.css">
+    <!-- <link rel="stylesheet" type="text/css" href="media_index.css"> -->
+  </head>
+
+  <body data-website="ts_b2b" data-cart="true">
+
+    <div id="main" class="recls">
+      <div class="container">
+        <div id="main-header" class="row">
+          <div class="title h0">Рекламации</div>
+        </div>
+        <div id="reclm" class="table-wrap active"></div>
+        <div id="mob-recls">
+          <div class="head">
+            <form class="search row">
+              <input type="text" data-value="" placeholder="Поиск...">
+              <input class="search icon" type="submit" value="">
+              <div class="close icon"></div>
+            </form>
+            <div class="relay icon" onclick="openPopUp('#recls-filters')"></div>
+          </div>
+          <div id="mob-rows" class="body template">
+            <div class="item @@status@@">
+              <div class="row">
+                <div class="name">@@name@@</div>
+                <div class="order">@@num@@</div>
+              </div>
+              <div class="row">
+                <div class="articul">@@articul@@</div>
+                <div class="date">@@date@@</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Модальное окно с фильтрацией -->
+    <div id="recls-filters" class="pop-up-container filters">
+      <div class="pop-up">
+        <div class="pop-up-title row">
+          <div class="title h2">Сортировки</div>
+          <div class="close icon"></div>
+        </div>
+        <div class="filter switch">
+          <div class="title row" onclick="switchContent(event)">
+            <div class="title white h3">По дате создания</div>
+            <div class="open white icon switch-icon"></div>
+          </div>
+          <div class="items switch-cont">
+            <div class="item">
+              <div class="row">
+                <div class="radios">
+                  <div class="option row">
+                    <div class="radio icon"></div>
+                    <div>Сначала новые</div>
+                  </div>
+                  <div class="option row">
+                    <div class="radio icon"></div>
+                    <div>Сначала старые</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="filter switch">
+          <div class="title row" onclick="switchContent(event)">
+            <div class="title white h3">По номеру рекламации</div>
+            <div class="open white icon switch-icon"></div>
+          </div>
+          <div class="items switch-cont">
+            <div class="item">
+              <div class="row">
+                <div class="radios">
+                  <div class="option row">
+                    <div class="radio icon"></div>
+                    <div>По возрастанию</div>
+                  </div>
+                  <div class="option row">
+                    <div class="radio icon"></div>
+                    <div>По убыванию</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="filter switch">
+          <div class="title row" onclick="switchContent(event)">
+            <div class="title white h3">По артикулу</div>
+            <div class="open white icon switch-icon"></div>
+          </div>
+          <div class="items switch-cont">
+            <div class="item">
+              <div class="row">
+                <div class="">
+                  <form id="articul-search" class="search row">
+                    <input type="text" data-value="" placeholder="Поиск...">
+                    <input class="search icon" type="submit" value="">
+                    <div class="close icon"></div>
+                  </form>
+                  <div class="radios">
+                    <div class="option row">
+                      <div class="radio icon"></div>
+                      <div>По возрастанию</div>
+                    </div>
+                    <div class="option row">
+                      <div class="radio icon"></div>
+                      <div>По убыванию</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="pop-up-title row">
+          <div class="title h2">Фильтры</div>
+        </div>
+        <div class="filter switch popup-filter">
+          <div class="title row" onclick="switchContent(event)">
+            <div class="title white h3">По статусу рекламации</div>
+            <div class="open white icon switch-icon"></div>
+          </div>
+          <div class="items switch-cont">
+            <div class="item switch close">
+              <div class="row">
+                <div class="title row">
+                  <div class="checkbox icon"></div>
+                  <div class="text">Ожидает подтверждения</div>
+                </div>
+              </div>
+            </div>
+            <div class="item switch close">
+              <div class="row">
+                <div class="title row">
+                  <div class="checkbox icon"></div>
+                  <div class="text">Обрабатывается</div>
+                </div>
+              </div>
+            </div>
+            <div class="item switch close">
+              <div class="row">
+                <div class="title row">
+                  <div class="checkbox icon"></div>
+                  <div class="text">Исполнена</div>
+                </div>
+              </div>
+            </div>
+            <div class="item switch close">
+              <div class="row">
+                <div class="title row">
+                  <div class="checkbox icon"></div>
+                  <div class="text">Завеншена</div>
+                </div>
+              </div>
+            </div>
+            <div class="item switch close">
+              <div class="row">
+                <div class="title row">
+                  <div class="checkbox icon"></div>
+                  <div class="text">Отклонена</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="filter switch popup-filter">
+          <div class="title row" onclick="switchContent(event)">
+            <div class="title white h3">По менеджеру</div>
+            <div class="open white icon switch-icon"></div>
+          </div>
+          <div class="items switch-cont">
+            <div id="test" class="item switch close">
+              <div class="row">
+                <div class="title row">
+                  <div class="checkbox icon"></div>
+                  <div class="text">@@manager@@</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="btns-wrap">
+          <div class="btn act">Показать (<span>0</span>)</div>
+        </div>
+      </div>
+
+    </div>
+
+    <script src ="../js/main.js"></script>
+    <script src="../js/table.js"></script>
+    <script src="../js/test.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,15 @@
+[
+  {
+    "name": "Иван",
+    "surname": "Петров",
+    "patronymic": "Сергеевич ",
+    "date_birth": "31.10.1986",
+    "position": "Руководитель отдела закупок",
+    "sex": "муж",
+    "skype": "i_petrov86@yandex.ru",
+    "email": "i_petrov86@yandex.ru",
+    "add_phone": "+7 (252) 555-0126",
+    "work_phone": "+7 (319) 555-0115",
+    "cell_phone": "+7 (319) 555-0115"
+  }
+]

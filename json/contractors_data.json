@@ -1,0 +1,82 @@
+[
+  {
+    "contr_name": "Семенов Иван Петрович",
+    "contr_inn": "9731002289/637584",
+    "contr_agent": "ООО, Пилот ",
+    "contr_sys": "Упрощенная",
+    "contr_date": "31.10.2016",
+    "contr_add": "119331, г. Москва, просп. Вернадского, д. 29, этаж 12, пом. I, ком. 4",
+    "contr_user": "Семенов И.О.",
+    "doc": [
+      {
+        "doc_title": "Договор с ООО «ТОП СПОРТС» от 31.10.2017",
+        "doc_url": "http://b2b.topsports.ru/test/testdoc"
+      },
+      {
+        "doc_title": "Договор с ООО «ТОП СПОРТС» от 31.10.2017",
+        "doc_url": "http://b2b.topsports.ru/test/testdoc"
+      },
+      {
+        "doc_title": "Договор с ООО «ТОП СПОРТС» от 31.10.2017",
+        "doc_url": "http://b2b.topsports.ru/test/testdoc"
+      }
+    ]
+  },
+  {
+    "contr_name": "Семенов Иван Петрович",
+    "contr_inn": "9731002289/637584",
+    "contr_agent": "ООО, Пилот ",
+    "contr_sys": "Прочая",
+    "contr_date": "31.10.2016",
+    "contr_add": "119331, г. Москва, просп. Вернадского, д. 29, этаж 12, пом. I, ком. 4",
+    "contr_user": "Семенов И.О.",
+    "doc": [
+      {
+        "doc_title": "Договор с ООО «ТОП СПОРТС» от 31.10.2017",
+        "doc_url": "http://b2b.topsports.ru/test/testdoc"
+      }
+    ]
+  },
+  {
+    "contr_name": "Семенов Иван Петрович",
+    "contr_inn": "9731002289/637584",
+    "contr_agent": "ООО, Пилот ",
+    "contr_sys": "Общая",
+    "contr_date": "31.10.2016",
+    "contr_add": "119331, г. Москва, просп. Вернадского, д. 29, этаж 12, пом. I, ком. 4",
+    "contr_user": "Семенов И.О.",
+    "doc": [
+      {
+        "doc_title": "Договор с ООО «ТОП СПОРТС» от 31.10.2017",
+        "doc_url": "http://b2b.topsports.ru/test/testdoc"
+      },
+      {
+        "doc_title": "Договор с ООО «ТОП СПОРТС» от 31.10.2017",
+        "doc_url": "http://b2b.topsports.ru/test/testdoc"
+      },
+      {
+        "doc_title": "Договор с ООО «ТОП СПОРТС» от 31.10.2017",
+        "doc_url": "http://b2b.topsports.ru/test/testdoc"
+      },
+      {
+        "doc_title": "Договор с ООО «ТОП СПОРТС» от 31.10.2017",
+        "doc_url": "http://b2b.topsports.ru/test/testdoc"
+      }
+    ]
+  },
+  {
+    "contr_name": "Семенов Иван Петрович",
+    "contr_inn": "9731002289/637584",
+    "contr_agent": "ООО, Пилот ",
+    "contr_sys": "Общая",
+    "contr_date": "31.10.2016",
+    "contr_add": "119331, г. Москва, просп. Вернадского, д. 29, этаж 12, пом. I, ком. 4",
+    "contr_user": "Семенов И.О.",
+    "doc": [
+      {
+        "doc_title": "Договор с ООО «ТОП СПОРТС» от 31.10.2017",
+        "doc_url": "http://b2b.topsports.ru/test/testdoc"
+      }
+    ]
+  }
+]

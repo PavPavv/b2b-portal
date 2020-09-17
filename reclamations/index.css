@@ -1,0 +1,124 @@
+#reclm td:nth-child(1) {
+  min-width: 10em;
+}
+
+#reclm td:nth-child(2) {
+  min-width: 10em;
+  text-align: center;
+}
+
+#reclm td:nth-child(3) {
+  min-width: 10em;
+}
+
+#reclm td:nth-child(4) {
+  min-width: 10em;
+}
+
+#reclm td:nth-child(5) {
+  min-width: 10em;
+}
+
+#reclm td:nth-child(6) {
+  min-width: 10em;
+  padding-top: 0;
+  padding-bottom: 0;
+  line-height: 0;
+  vertical-align: middle;
+  text-align: center;
+}
+
+#mob-recls {
+  display: none;
+  width: 100%;
+}
+
+#mob-recls .head {
+  z-index: 10;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 16px;
+  background: #F8F8F8;
+  box-shadow: 0px 0px 5px rgba(52, 73, 94, 0.05), 0px 2px 10px rgba(52, 73, 94, 0.06), 0px 4px 15px rgba(52, 73, 94, 0.1);
+}
+
+#mob-recls .body {
+  z-index: 1;
+  position: relative;
+  width: 100%;
+}
+
+#mob-recls .item {
+  width: 100%;
+  padding: 10px 16px;
+  border-left: 2px solid transparent;
+  border-bottom: 1px solid #cccccc;
+  background: #ffffff;
+}
+
+#mob-recls .item.wait {
+  border-left: 2px solid #F69C00;
+}
+
+#mob-recls .item.yes {
+  border-left: 2px solid #3F9726;
+}
+
+#mob-recls .item.no {
+  border-left: 2px solid #CE0014;
+}
+
+#mob-recls .item.done {
+  border-left: 2px solid #2C6DA8;
+}
+
+#mob-recls .item.registr {
+  border-left: 2px solid #8596A6;
+}
+
+#mob-recls .row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 14px;
+}
+
+#mob-recls .row:first-child {
+  margin-bottom: 5px;
+}
+
+#mob-recls .row > div {
+  line-height: 18px;
+}
+
+#mob-recls .row .articul {
+  font-size: 14px;
+}
+
+#articul-search {
+  margin: 0.714em 0;
+}
+
+#recls-filters::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+#recls-filters::-webkit-scrollbar-track {
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 1px solid #C6C6C6;
+  border-radius: 19px;
+}
+
+#recls-filters::-webkit-scrollbar-thumb {
+  background-color: #C6C6C6;
+  border: 1px solid #C6C6C6;
+  border-radius: 19px;
+  cursor: pointer;
+}
+
+#recls-filters::-webkit-scrollbar-corner {
+  background-color: rgba(255, 255, 255, 0.2);
+}

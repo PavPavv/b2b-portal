@@ -1,0 +1,457 @@
+/* =====================================================================================================
+Разрешения без ховера:
+===================================================================================================== */
+
+@media (pointer:coarse) {
+
+  /* Подсказки: */
+
+  [tooltip]:hover::before,
+  [tooltip]:hover::after {
+    display: none;
+  }
+
+  .tooltip {
+    display: none;
+  }
+}
+
+/* =====================================================================================================
+Все разрешения по ориентации экрана:
+===================================================================================================== */
+
+/* Портретная ориентация: */
+@media all and (orientation:portrait) {
+  #full-img .carousel {
+    max-width: 90vw;
+    max-height: 90vw;
+  }
+  #full-img .carousel-gallery img {
+    max-width: 90vw;
+    max-height: 90vw;
+  }
+}
+
+/* Альбомная ориентация: */
+@media all and (orientation:landscape) {
+  #full-img .carousel {
+    max-width: 90vh;
+    max-height: 90vh;
+  }
+  #full-img .carousel-gallery img {
+    max-width: 90vh;
+    max-height: 90vh;
+  }
+}
+
+/* =====================================================================================================
+Desktop:
+===================================================================================================== */
+
+/* Стили на ширину больше 1921px: */
+@media only screen and (min-width: 1921px) {
+
+  /* Основные стили: */
+
+  .container {
+    margin: 0 3%;
+  }
+
+  /* Кнопка "Наверх страницы": */
+
+  #up-btn {
+    right: 3%;
+  }
+}
+
+/* Стили на ширину больше 1081px: */
+@media only screen and (min-width: 1081px) {
+
+  /* Окно уведомлений: */
+
+  #notifications::-webkit-scrollbar {
+    width: 7px;
+    height: 7px;
+  }
+
+  #notifications::-webkit-scrollbar-track {
+    background-color: #F8F8F8;
+    border: 1px solid #C6C6C6;
+    border-radius: 19px;
+  }
+
+  #notifications::-webkit-scrollbar-thumb {
+    background-color: #C6C6C6;
+    border: 1px solid #C6C6C6;
+    border-radius: 19px;
+    cursor: pointer;
+  }
+
+  #notifications::-webkit-scrollbar-corner {
+    background-color: #F8F8F8;
+  }
+}
+
+/* =====================================================================================================
+Laptop:
+===================================================================================================== */
+
+/* Стили на ширину от 0 до 1360px включительно: */
+@media only screen and (max-width: 1360px) {
+
+  /* Основные стили: */
+
+  .container {
+    margin: 0 3rem;
+  }
+
+  /* Всплывающие окна: */
+
+  .pop-up-container {
+    padding: 40px 0;
+  }
+
+  .pop-up-container.filters {
+    padding: 0;
+  }
+
+  /* Кнопка "Наверх страницы": */
+
+  #up-btn {
+    right: 3rem;
+  }
+
+  /* Изображение на весь экран: */
+
+  /* #full-img .carousel .left-btn {
+    background: url(../img/slider/slider_nav_left.png) no-repeat center;
+    left: -3em;
+    background-color: transparent;
+    opacity: 1 !important;
+  }
+  #full-img .carousel .right-btn {
+    background: url(../img/slider/slider_nav_right.png) no-repeat center;
+    right: -3em;
+    background-color: transparent;
+    opacity: 1 !important;
+  } */
+}
+
+/* Стили на ширину от 0 до 1080px включительно: */
+@media only screen and (max-width: 1080px) {
+
+  /* Хедер */
+
+  .header-top .activate,
+  .header-top .activate .head {
+    display: none;
+  }
+
+  .header-top .notifications.icon {
+    background-image: url('../img/notifications_min.svg');
+  }
+
+  .header-top .burger.icon {
+    display: flex;
+    margin-left: 1.428em;
+  }
+
+  #mob-menu {
+    display: block;
+  }
+
+  /* Окно уведомлений: */
+
+  #notifications .pop-up {
+    width: 100%;
+    min-width: 100%;
+  }
+}
+
+/* =====================================================================================================
+Tablet:
+===================================================================================================== */
+
+/* Стили на ширину от 0 до 960px включительно: */
+@media only screen and (max-width: 960px) {
+
+  /* Тоглы */
+
+  .toggle {
+    width: 40px;
+    height: 20px;
+    margin: 7px;
+  }
+
+  .toggle .toggle-in {
+    top: -4px;
+    left: -7px;
+    width: 26px;
+    height: 26px;
+  }
+
+  .checked .toggle .toggle-in,
+  .checked.toggle .toggle-in {
+    left: 18px;
+  }
+}
+
+/* Стили на ширину от 0 до 767px включительно: */
+@media only screen and (max-width: 767px) {
+
+  /* Основные стили: */
+
+  body {
+    padding-top: 41px;
+    padding-bottom: 70px;
+  }
+
+  .container {
+    margin: 0 2.4rem;
+  }
+
+  /* Заголовок страницы: */
+
+  #main-header {
+    padding: 2.4rem 0;
+  }
+
+  #main-header + .btn {
+    display: none;
+  }
+
+  /* Подсказки: */
+
+  [tooltip]:hover::before,
+  [tooltip]:hover::after {
+    display: none;
+  }
+
+  /* Иконки: */
+
+  .icon {
+    margin-right: 0.714em;
+  }
+
+  .add.icon,
+  .relay.icon {
+    display: block;
+  }
+
+  /* Хедер */
+
+  .header-top .container {
+    height: 40px;
+  }
+
+  .header-top .activate {
+    height: 40px;
+  }
+
+  .header-top .right-side .icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  .header-top .logo img {
+    max-height: 18px;
+    max-width: 100%;
+  }
+
+  #mob-menu {
+    padding: 1.428em;
+    padding-top: 64px;
+  }
+
+  /* Таблицы: */
+
+  .table-wrap {
+    display: none !important;
+  }
+
+  .table-adaptive {
+    display: block;
+  }
+
+  /* Блок информации: */
+
+  .infoblock .head {
+    background: #53606F;
+  }
+
+  .infoblock .head .title {
+    padding-top: 0.75em;
+    padding-bottom: 0.75em;
+    color: #FFFFFF;
+  }
+
+  .infoblock .head .open.icon {
+    display: block;
+  }
+
+  /* Всплывающие окна: */
+
+  .pop-up-container {
+    padding: 0;
+  }
+
+  .pop-up {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    width: 100% !important;
+    max-width: 100%;
+    min-height: 100%;
+  }
+
+  .pop-up-body {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+
+  /* Блок фильтров: */
+
+  .pop-up-container.filters {
+    display: flex;
+  }
+
+  .pop-up-container.filters.visible {
+    position: fixed;
+    display: flex;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  .pop-up-container.filters.visible.open {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .filters .pop-up {
+    background-color: #FFFFFF;
+  }
+
+  .filters .pop-up-title {
+    display: flex;
+    padding: 1em 2.143em;
+    margin-bottom: 0;
+  }
+
+  .filters .filter {
+    padding-bottom: 1em;
+  }
+
+  .filters .filter > .title.row {
+    padding: 0.714em 2.143em;
+  }
+
+  .filters .filter .item > .row {
+    padding: 1em 2.143em;
+    padding-bottom: 0;
+  }
+
+  .pop-up-container.filters .btns-wrap {
+    display: flex;
+  }
+
+  /* Форма отправки на сервер: */
+
+  .pop-up-body form.post {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+
+  /* Окно уведомлений: */
+
+  #notifications .message.icon {
+    width: 25px;
+    height: 25px;
+    margin-bottom: 0.357em;
+  }
+
+  #notifications .message.row > .row {
+    display: block;
+  }
+
+  #notifications .date {
+    position: absolute;
+    top: 1.5em;
+    left: 35px;
+  }
+
+  /* Кнопка "Наверх страницы": */
+
+  #up-btn {
+    right: 2.4rem;
+  }
+}
+
+/* =====================================================================================================
+Mobile:
+===================================================================================================== */
+
+/* Стили на ширину от 0 до 499px включительно: */
+@media only screen and (max-width: 499px) {
+
+  /* Основные стили: */
+
+  .container {
+    margin: 0 1.6rem;
+  }
+
+  /* Стили текста: */
+
+  .h0 {
+    font-size: 1.71em;
+  }
+
+  /* Заголовок страницы: */
+
+  #main-header {
+    padding: 1.6rem 0;
+  }
+
+  /* Блок информации: */
+
+  .table-adaptive {
+    margin: 0 -1.6rem 0 -1.6rem;
+  }
+
+  /* Форма отправки на сервер: */
+
+  form.post {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+
+  form.post .form-cols {
+    display: block;
+  }
+
+  form.post .form-cols > div {
+    width: 100%;
+    padding: 0;
+  }
+
+  /* Блок фильтров: */
+
+  .filters .pop-up-title {
+    padding: 1em 1.428em;
+  }
+
+  .filters .filter > .title.row {
+    padding: 0.714em 1.428em;
+  }
+
+  .filters .filter .item > .row {
+    padding: 1em 1.428em;
+    padding-bottom: 0;
+  }
+}

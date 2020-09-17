@@ -1,0 +1,27 @@
+@media only screen and (max-width: 767px) {
+
+  #mob-recls {
+    display: block;
+  }
+
+}
+
+@media only screen and (max-width: 510px) {
+
+  #mob-recls .item .name {
+    max-width: 200px;
+  }
+
+}
+
+@media only screen and (max-width: 330px) {
+
+  #mob-recls .item .name {
+    max-width: 100px;
+  }
+
+  #articul-search {
+    width: 20em;
+  }
+
+}

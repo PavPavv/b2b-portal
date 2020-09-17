@@ -1,0 +1,71 @@
+#main-header {
+  padding-bottom: 0;
+}
+
+.cert-filters {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 64px;
+  padding: 2.8rem 0;
+  background-color: #F2F2F2;
+  border-bottom: 1px solid #D5D5D5;
+  z-index: 1;
+}
+
+.cert-filters > div {
+  margin-right: 1.428em;
+}
+
+.cert-filters > div > .title {
+  margin-bottom: 0.428em;
+}
+
+form.search {
+  width: 19.625em;
+}
+
+#notice {
+  display: none;
+  margin-top: 1em;
+}
+
+#cert-data .item {
+  padding: 1.25em;
+  margin-bottom: 0.75em;
+  border: 1px solid #D5D5D5;
+  border-radius: 3px;
+  background: #F8F8F8;
+}
+
+#cert-data .item:first-child {
+  border-top: none;
+}
+
+#cert-data .item .view {
+  width: 73px;
+  min-width: 73px;
+  height: 101px;
+  margin-right: 1.25em;
+  background: url(../img/cert_view.png) no-repeat;
+  background-size: contain;
+}
+
+#cert-data .item .cont {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 101px;
+}
+
+#cert-data .item .cont > div:first-child {
+  margin-bottom: 0.9em;
+}
+
+#cert-data .item .cont .row {
+  align-items: center;
+}
+
+#cert-search-mob,
+#calendar {
+  margin-bottom: 10px;
+}

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../img/top_sports_logo_black_short_transparency.png">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ТОП СПОРТС - Мои адреса</title>
+    <meta name="keywords" content="ТОП СПОРТС">
+    <meta name="description" content="ТОП СПОРТС">
+    <script src="../js/check_auth.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/fonts.css">
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <link rel="stylesheet" type="text/css" href="../css/media_main.css">
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <link rel="stylesheet" type="text/css" href="media_index.css">
+  </head>
+
+  <body data-website="ts_b2b" data-cart="true">
+
+    <div id="main">
+      <div class="container">
+        <div id="main-header">
+          <div class="main-title row">
+            <div class="title-row row">
+              <div class="title h0">Мои адреса</div>
+              <div class="mob-btns">
+                <div class="question icon" tooltip="Добавьте магазин, чтобы он отобразился на карте диллера" test="left"></div>
+                <div class="add icon" onclick="openAddressPopUp()"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="shops-wrap">
+          <div class="shops">
+            <div class="basic btn" onclick="openAddressPopUp()">Добавить</div>
+            <div class="wrap template" id="shop">
+              <div class="shop">
+                <div class="row inner outer" onclick="toggleOuterBlock(this)">
+                  <div class="col">
+                    <div class="row name">
+                      <div class="title h3">@@company@@</div>
+                      <div class="indicate">
+                        <div class="@@moderate@@" data-tooltip="test" help></div>
+                      </div>
+                      <div class="edit icon" onclick="openAddressPopUp('@@id@@')"></div>
+                    </div>
+                    <div class="text-s gray">@@type@@</div>
+                    <div class="text-s gray">@@status@@</div>
+                    <div class="text-m">@@address@@</div>
+                    <a href="">@@site@@</a>
+                  </div>
+                  <div class="col">
+                    <img src="@@img_src@@" alt="лого компании">
+                  </div>
+                </div>
+                <div class="adding outer-target displayNone">
+                  <div class="text-s">@@postcode@@</div>
+                  <div class="row">
+                    <div class="time-status">Открыто</div>
+                    <div class="schedule toggle-block" onclick="toggleInnerBlock(event)">
+                      <div class="time-info">
+                        <div class="title">Закроется в 20:00</div>
+                        <div class="triangle icon"></div>
+                      </div>
+                      <div class="days target-block displayNone">
+                        <div class="row time-block">
+                          <div>@@day@@</div>
+                          <div>@@time@@</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="map"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Модальное окно -->
+    <div id="address" class="pop-up-container">
+      <div id="add-addrees" class="pop-up">
+        <div class="pop-up-title row">
+          <div class="title h1">Новый адрес</div>
+          <div class="close icon"></div>
+        </div>
+        <div class="pop-up-body">
+          <form class="post" id="address-form">
+            <div class="form-wrap">
+              <div class="option row">
+                <input type="checkbox" value="">
+                <div class="checkbox icon"></div>
+                <div>Показать на карте дилеров</div>
+              </div>
+            </div>
+            <div class="form-wrap" required>
+              <div class="title">Адрес*</div>
+              <input type="text" value="" name="address" data-type="cyril" placeholder="Введите адрес" maxlength="40">
+              <div class="err">Поле не заполнено</div>
+            </div>
+            <div class="form-wrap" required>
+              <div class="title">Тип торговли*</div>
+              <div id="sys-type" class="activate select">
+                <input type="hidden" name="system">
+                <div class="head row">
+                  <div class="title">Тип торговли</div>
+                  <div class="triangle icon"></div>
+                </div>
+                <div class="drop-down">
+                  <div class="item" data-value="default">Сбросить</div>
+                  <div class="item" data-value="1">Значение 1</div>
+                  <div class="item" data-value="2">Значение 2</div>
+                  <div class="item" data-value="3">Значение 3</div>
+                </div>
+              </div>
+              <div class="err">Поле не заполнено</div>
+            </div>
+            <div class="form-wrap" required>
+              <div class="title">Название*</div>
+              <input type="text" value="" name="company" data-type="name" placeholder="Введите название" maxlength="40">
+              <div class="err">Поле не заполнено</div>
+            </div>
+            <div class="form-wrap">
+              <div class="title">Сайт</div>
+              <input type="text" value="" name="site"  placeholder="Введите адрес сайта" maxlength="40">
+              <div class="err">Поле не заполнено</div>
+            </div>
+            <div class="form-cols">
+              <div class="form-col1">
+                <div class="form-wrap" required="">
+                  <div class="title">Телефон*</div>
+                  <input type="text" value="" name="phone" data-type="tel" placeholder="+7 ( _ _ _ ) _ _ _ -_ _ -_ _" maxlength="16">
+                  <div class="err">Поле не заполнено</div>
+                </div>
+              </div>
+              <div class="form-col2 download">
+                <div class="file-wrap">
+                  <input id="load-img" type="file" accept="image/*">
+                  <div class="file-preview"></div>
+                  <label class="title" for="load-img">лого</label>
+                </div>
+              </div>
+            </div>
+            <div class="btns-wrap">
+              <input class="btn sub-act" type="submit" value="Отправить" disabled>
+            </div>
+          </form>
+        </div>
+        <div class="loader">
+          <div class="loader icon"></div>
+          <div class="text">Пожалуйста, подождите</div>
+        </div>
+      </div>
+    </div>
+
+    <script src="../js/main.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript"></script>
+    <script type="text/javascript" charset="utf-8" async
+      src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A86fb7acaf015666acc5a70ee0dcee3541c64c33886a6519986d7ea4315a67e8f&amp;width=100%25&amp;height=720&amp;lang=ru_RU&amp;scroll=true&amp;id=map"></script>
+    <!-- <script type="text/javascript">
+      // Функция ymaps.ready() будет вызвана, когда
+      // загрузятся все компоненты API, а также когда будет готово DOM-дерево.
+      ymaps.ready(init);
+      function init() {
+        // Создание карты.
+        var myMap = new ymaps.Map("map", {
+          // Координаты центра карты.
+          // Порядок по умолчанию: «широта, долгота».
+          // Чтобы не определять координаты центра карты вручную,
+          // воспользуйтесь инструментом Определение координат.
+          center: [55.76, 37.64],
+          // Уровень масштабирования. Допустимые значения:
+          // от 0 (весь мир) до 19.
+          zoom: 7
+        });
+      }
+    </script> -->
+    <script src="../js/table.js"></script>
+    <script src="../js/test.js"></script>
+    <script src ="index.js"></script>
+  </body>
+</html>

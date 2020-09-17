@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>ТОП СПОРТС - Ваш профиль</title>
+  <meta name="keywords" content="ТОП СПОРТС">
+  <meta name="description" content="ТОП СПОРТС">
+  <link rel="icon" href="../img/top_sports_logo_black_short_transparency.png">
+  <script src="../js/check_auth.js"></script>
+  <link rel="stylesheet" type="text/css" href="../css/fonts.css">
+  <link rel="stylesheet" type="text/css" href="../css/main.css">
+  <link rel="stylesheet" type="text/css" href="../css/media_main.css">
+  <link rel="stylesheet" type="text/css" href="index.css">
+  <link rel="stylesheet" type="text/css" href="media_index.css">
+</head>
+<body data-website="ts_b2b" data-card="true">
+
+  <div id="main">
+    <div id="profile-page" class="container">
+      <div id="main-header" class="row">
+        <div class="title h0">Ваш профиль</div>
+      </div>
+      <div class="card" id="profile-card">
+        <div class="row head">
+          <div class="title h2">Ваши данные</div>
+          <div class="edit icon" onclick="openPopUp('#edit-profile-modal')"></div>
+        </div>
+        <div class="row">
+          <div class="block">
+            <div class="line">Имя: <span>@@name@@</span></div>
+            <div class="line">Фамилия: <span>@@surname@@</span></div>
+            <div class="line">Отчество: <span>@@patronymic@@</span></div>
+            <div class="line">Дата рождения: <span>@@date_birth@@</span></div>
+            <div class="line">Должность: <span>@@position@@</span></div>
+            <div class="line">Пол: <span>@@sex@@</span></div>
+          </div>
+          <div class="block">
+            <div class="line">Skype: <span>@@skype@@</span></div>
+            <div class="line">Email: <span>@@email@@</span></div>
+            <div class="line">Добавочный телефон: <span>@@add_phone@@</span></div>
+            <div class="line">Рабочий телефон: <span>@@work_phone@@</span></div>
+            <div class="line">Мобильный телефон: <span>@@cell_phone@@</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Прелоадер страницы -->
+      <div id="page-loader" class="loader">
+        <div class="loader icon"></div>
+        <div class="text"></div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Модальное окно "Изменить профиль -->
+  <div id="edit-profile-modal" class="pop-up-container">
+    <div id="edit-profile" class="pop-up">
+      <div class="pop-up-title row">
+        <div class="title h1">Изменить профиль</div>
+        <div class="close icon"></div>
+      </div>
+      <div class="pop-up-body">
+        <form class="post">
+          <div class="form-wrap" required>
+            <div class="title">Имя*</div>
+            <input type="text" value="" name="" data-type="cyril" placeholder="Введите имя" maxlength="40">
+            <div class="err">Поле не заполнено</div>
+          </div>
+          <div class="form-wrap" required>
+            <div class="title">Фамилия*</div>
+            <input type="text" value="" name="" data-type="cyril" placeholder="Введите фамилию" maxlength="40">
+            <div class="err">Поле не заполнено</div>
+          </div>
+          <div class="form-wrap">
+            <div class="title">Отчество</div>
+            <input type="text" value="" name="" data-type="cyril" placeholder="Введите отчество" maxlength="40">
+            <div class="err">Поле не заполнено</div>
+          </div>
+          <div class="form-wrap required">
+            <div class="title">Должность*</div>
+            <input type="text" value="" name="" data-type="cyril" placeholder="Введите должность" maxlength="40">
+            <div class="err">Поле не заполнено</div>
+          </div>
+          <div class="form-cols">
+            <div class="form-col2">
+              <div class="form-wrap">
+                <div class="title">День рождения</div>
+                <input id="profile-birth" type="text" value="" name="" data-type="birth"  placeholder="28/10/1980" maxlength="10">
+                <div class="err">Поле не заполнено</div>
+              </div>
+            </div>
+            <div class="form-col2">
+              <div class="form-wrap">
+                <div class="title">Пол</div>
+                <div class="row select-choice">
+                  <div class="option row select-qty">
+                    <input type="radio" value="Мужской" name="some_name[category]">
+                    <div class="radio icon"></div>
+                    <div>Мужской</div>
+                  </div>
+                  <div class="option row">
+                    <input type="radio" value="Женский" name="some_name[category]">
+                    <div class="radio icon"></div>
+                    <div>Женский</div>
+                  </div>
+                </div>
+                <div class="err">Необходимо выбрать значение</div>
+              </div>
+            </div>
+          </div>
+          <div class="form-cols">
+            <div class="form-col2">
+              <div class="form-wrap" required="">
+                <div class="title">Email*</div>
+                <input type="text" value="" name="" data-type="email" placeholder="Введите email" maxlength="50">
+                <div class="err">Поле не заполнено</div>
+              </div>
+            </div>
+            <div class="form-col2">
+              <div class="form-wrap">
+                <div class="title">Skype</div>
+                <input type="text" value="" name="" data-type="nickname" placeholder="Введите email" maxlength="50">
+                <div class="err">Поле не заполнено</div>
+              </div>
+            </div>
+          </div>
+          <div class="form-wrap" required="">
+            <div class="title">Мобильный телефон*</div>
+            <input type="text" value="" name="" data-type="tel" placeholder="+7 ( _ _ _ ) _ _ _ -_ _ -_ _" maxlength="16">
+            <div class="err">Поле не заполнено</div>
+          </div>
+          <div class="form-wrap">
+            <div class="form-cols">
+              <div class="form-col2">
+                <div class="form-wrap">
+                  <div class="title">Рабочий телефон</div>
+                  <input type="text" value="" name="" data-type="tel" placeholder="+7 ( _ _ _ ) _ _ _ -_ _ -_ _" maxlength="16">
+                  <div class="err">Поле не заполнено</div>
+                </div>
+              </div>
+              <div class="form-col2">
+                <div class="form-wrap">
+                  <div class="title">Доб. телефон</div>
+                  <input type="text" value="" name="" data-type="tel" placeholder="+7 ( _ _ _ ) _ _ _ -_ _ -_ _" maxlength="16">
+                  <div class="err">Поле не заполнено</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="btns-wrap">
+            <input class="btn sub-act" type="submit" value="Отправить" disabled>
+          </div>
+        </form>
+      </div>
+      <div class="loader">
+        <div class="loader icon"></div>
+        <div class="text">Пожалуйста, подождите</div>
+      </div>
+    </div>
+  </div>
+
+    <script src ="../js/main.js"></script>
+    <script src="../js/test.js"></script>
+    <script src ="../js/calendar.js"></script>
+    <script src ="index.js"></script>
+  </body>
+</html>

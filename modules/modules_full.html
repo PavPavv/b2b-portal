@@ -1,0 +1,221 @@
+<!-- Хедер -->
+<div id="header">
+  <div class="header-top">
+    <div class="container row">
+      <div class="left-side row">
+        <a class="logo" href="../dashboard"><img src="../img/logo.svg" alt="Логотип"/></a>
+        <div class="activate hover">
+          <div class="head row">
+            <a class="title" href="../dashboard">Рабочий стол</a>
+          </div>
+        </div>
+        <div class="activate hover">
+          <div class="head row">
+            <div class="title">Каталоги</div>
+            <div class="triangle icon"></div>
+          </div>
+          <div id="catalogs" class="drop-down template catalogs">
+            <div class="row">
+              <a class="catalog-#id# item catalog" href="../#id#" onclick="#isFunc#">#title#</a>
+              <a class="cart-#id# item cart-info row #isFull#" href="../#id#/?cart" onclick="#isFunc#">
+                <div class="cart icon"></div>
+                <div class="qty">#qty#</div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="activate hover select">
+          <div class="head row">
+            <div class="title">Закупки</div>
+            <div class="triangle icon"></div>
+          </div>
+          <div class="drop-down">
+            <a class="item" href="../orders/">Заказы</a>
+            <a class="item" href="../reclamations/">Рекламации</a>
+            <a class="item" href="../documents/">Документы</a>
+            <a class="item" href="../certificates/">Сертификаты</a>
+          </div>
+        </div>
+      </div>
+      <div class="right-side row">
+        <div class="activate hover select">
+          <a href="../profile" class="head row">
+            <div class="profile icon"></div>
+            <div id="profile" class="template">
+              <div class="title">#login#</div>
+              <div class="username text light">#username#</div>
+            </div>
+          </a>
+          <div class="drop-down">
+            <div class="links">
+              <a class="item" href="../users">Пользователи</a>
+              <a class="item" href="../contractors">Контрагенты</a>
+              <a class="item" href="../addresses">Мои адреса</a>
+              <!-- <a class="item" href="../shops">Магазины</a> -->
+              <!-- <a class="item" href="../monitoring">Мониторинг</a> -->
+              <a class="item" href="https://yadi.sk/d/I03PCO253MFRuj" target="_blank">Медиабанк</a>
+            </div>
+            <a class="item" onclick="logOut(event)">Выход</a>
+          </div>
+        </div>
+        <div class="notifications icon" onclick="openPopUp('#notifications')">
+          <div class="qty in-circle row">#qty#</div>
+        </div>
+        <div class="burger icon" onclick="toggleMobMenu()"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Мобильное меню (адаптив хедера) -->
+<div id="mob-menu">
+  <div class="profile-wrap">
+    <a href="../profile" class="row">
+      <div class="profile icon"></div>
+      <div id="mob-profile" class="template">
+        <div class="title">#login#</div>
+        <div class="username text light">#username#</div>
+      </div>
+    </a>
+  </div>
+  <div class="list">
+    <div class="item switch close">
+      <div class="item-wrap" onclick="switchContent(event)">
+        <div class="title" >Профиль</div>
+        <div class="open dark icon switch-icon"></div>
+      </div>
+      <div class="sublist switch-cont">
+        <div class="subitem">
+          <a href="../users">Пользователи</a>
+        </div>
+        <div class="subitem">
+          <a href="../contractors">Контрагенты</a>
+        </div>
+        <div class="subitem">
+          <a href="../addresses">Мои адреса</a>
+        </div>
+        <div class="subitem">
+          <a href="https://yadi.sk/d/I03PCO253MFRuj" target="_blank">Медиабанк</a>
+        </div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="item-wrap">
+        <div class="title">
+          <a href="../dashboard">Рабочий стол</a>
+        </div>
+      </div>
+    </div>
+    <div class="item switch close">
+      <div class="item-wrap" onclick="switchContent(event)">
+        <div class="title">Каталоги</div>
+        <div class="open dark icon switch-icon"></div>
+      </div>
+      <div id="mob-catalogs" class="sublist switch-cont template">
+        <div class="row">
+          <div class="sublist-items">
+            <a class="catalog-#id# item catalog" href="../#id#" onclick="#isFunc#">#title#</a>
+          </div>
+          <div class="sublist-qty">
+            <a class="cart-#id# item cart-info row #isFull#" href="../#id#/?cart" onclick="#isFunc#">
+              <div class="cart icon"></div>
+              <div class="qty">#qty#</div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="item switch close">
+      <div class="item-wrap" onclick="switchContent(event)">
+        <div class="title">Закупки</div>
+        <div class="open dark icon switch-icon"></div>
+      </div>
+      <div class="sublist switch-cont">
+        <div class="subitem">
+          <a href="../orders">Заказы</a>
+        </div>
+        <div class="subitem">
+          <a href="../reclamations">Рекламации</a>
+        </div>
+        <div class="subitem">
+          <a href="../documents">Документы</a>
+        </div>
+        <div class="subitem">
+          <a href="../certificates">Сертификаты</a>
+        </div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="item-wrap">
+        <div class="title">
+          <a onclick="logOut(event)">Выход</a>
+        </div>
+    </div>
+  </div>
+  </div>
+</div>
+
+<!-- Футер -->
+<div id="footer">
+  <div class="container">
+    <div class="wrap">
+      <div>Отдел продаж: <a href="tel:+78463004499">+7 (846) 300-44-99</a></div>
+      <div>© 2020 TOP SPORTS</div>
+    </div>
+  </div>
+</div>
+
+<!-- Окно уведомлений -->
+<div id="notifications" class="pop-up-container">
+  <div class="pop-up">
+    <div class="pop-up-title row">
+      <div class="row">
+        <div class="title h1">Уведомления</div>
+      </div>
+      <div class="close icon"></div>
+    </div>
+    <div class="pop-up-body">
+      <div class="message row #status# template">
+        <div class="row">
+          <div class="message icon"></div>
+          <div class="message text">
+            <div>#text#</div>
+            <div class="row #isHidden#">
+              <div class="download icon"></div>
+              <div class="link">#link#</div>
+            </div>
+          </div>
+        </div>
+        <div class="date text midlight">#date#, #time#</div>
+      </div>
+    </div>
+    <div class="loader">
+      <div class="loader icon"></div>
+      <div class="text">Пожалуйста, подождите</div>
+    </div>
+  </div>
+</div>
+
+<!-- Системные сообщения -->
+<div id="alerts" class="pop-up-container">
+  <div class="pop-up">
+    <div class="close icon"></div>
+    <div class="text"></div>
+    <div class="btns-wrap">
+      <div class="btn cancel">Отмена</div>
+      <div class="btn act accept">Ок</div>
+    </div>
+  </div>
+</div>
+
+<!-- Прелоадер страницы -->
+<div id="page-loader" class="loader">
+  <div class="loader icon"></div>
+  <div class="text"></div>
+</div>
+
+<!-- Кнопка "Наверх страницы" -->
+<svg id="up-btn" onclick="goToTop()" width="38" height="31" viewBox="0 0 38 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect x="0.5" y="0.5" width="37" height="30" rx="4.5" fill="#53606F" fill-opacity="0.6" stroke="white"/>
+  <path d="M18.925 11.225C18.625 10.925 18.225 10.925 17.925 11.225L10.225 18.925C9.925 19.225 9.925 19.625 10.225 19.825C10.525 20.125 10.925 20.125 11.225 19.825L18.525 12.825L25.825 19.825C26.125 20.125 26.525 20.125 26.825 19.825C27.125 19.525 27.125 19.125 26.825 18.925L18.925 11.225Z" fill="white"/>
+</svg>

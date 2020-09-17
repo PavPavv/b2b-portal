@@ -1,0 +1,641 @@
+/* перенести в main.css */
+.main .container{
+  position: relative;
+}
+
+.head-pan {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+/* Стили для страницы с рекламацией */
+.container1{
+  display: flex;
+  width: 75%;
+  margin-top: 20px;
+}
+
+.left-row .icon{
+  font-size: 1.8em;
+}
+
+.align-center{
+  display: flex;
+  align-items: flex-start;
+}
+
+.refund-btn{
+  background: #F05A28 url('../img/download-complaint-active.svg') 165px center no-repeat!important;
+}
+
+.refund-info{
+  min-width: 50px;
+  width: 13.85em;
+  margin-right: 2.14em;
+  text-align: right;
+  font-size: 0.85em;
+  line-height: 1.7em;
+  color: #909090;
+}
+
+/* Состояние рекламации */
+.progress-wrap{
+  margin-top: 30px;
+  margin-left: 40px;
+  padding-bottom: 1.5vw;
+}
+
+.progress-bar{
+  display: flex;
+  align-items: center;
+}
+
+.progress-item{
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 40px;
+}
+
+.progress-title{
+  position: absolute;
+  top: -35px;
+  right: 15px;
+  margin-bottom: 1vw;
+  font-size: 0.85em;
+  font-weight: 600;
+  line-height: 1.5em;
+  letter-spacing: 0.01em;
+  color: #8596A6;
+  transform: translateX(50%);
+}
+
+.progress-title.denied{
+  color: #CE0014;
+}
+
+.progress-item .non-active{
+  color: #B3B3B3;
+}
+
+.progress-title.accepted{
+  color: #228007;
+}
+
+.progress-title:nth-child(2){
+  right: 0!important;
+}
+
+.progress-title div:nth-child(3){
+  margin-right: 15.5vw;
+}
+
+.one{
+  width: 5%;
+}
+
+.point.point-active.check-progress {
+  margin: 0 0 0 auto;
+}
+
+.line{
+  width: 16.45vw;
+  height: 1px;
+  margin: 0 10px;
+  background: #C6C6C6;
+}
+
+.point{
+  width: 1.875vw;
+  height: 1.875vw;
+  min-width: 24px;
+  min-height: 24px;
+  border-radius: 50%;
+  background: #ffffff;
+}
+
+/* индикатор "Зарегистрирована" */
+.point.register{
+  background: url('../img/recl_registered.svg') center center no-repeat;
+  background-size: contain;
+
+}
+
+/* индикатор "Обрабатывается" */
+.point.process{
+  background: url('../img/recl_process.svg') center center no-repeat;
+  background-size: contain;
+}
+
+.point.wait{
+  background: url('../img/recl_process_nonactive.svg') center center no-repeat;
+  background-size: contain;
+}
+
+/* индикатор "Решение" */
+.point.result{
+  background: url('../img/recl_result_nonactive.svg') center center no-repeat;
+  background-size: contain;
+}
+
+.point.denied{
+  background: url('../img/recl_denied.svg') center center no-repeat;
+  background-size: contain;
+}
+
+/* индикатор "Исполнена" */
+.point.undone{
+  background: url('../img/recl_done_nonactive.svg') center center no-repeat;
+  background-size: contain;
+}
+
+.point.accepted{
+  background: url('../img/recl_accepted.svg') center center no-repeat;
+  background-size: contain;
+}
+
+.point.done{
+  background: url('../img/recl_done_active.svg') center center no-repeat;
+  background-size: contain;
+}
+
+/* Основное описание рекламации */
+main{
+  display: flex;
+}
+
+.container1 .complaint:first-child{
+  width: 35%;
+}
+
+.container1 .complaint:last-child{
+  width: 65%;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  align-self: stretch;
+  height: 100%;
+}
+
+.complaint{
+  display: flex;
+  flex-direction: column;
+}
+
+.cont > div{
+  margin-bottom: 0.5em;
+}
+
+.complaint-info > div:last-child{
+  margin-bottom: 0;
+}
+
+.complaint-info span{
+  color: #666666;
+}
+
+.complaint-info span,
+.complaint-info a{
+  font-weight: normal;
+}
+
+.complaint-info a{
+  text-decoration: none;
+}
+
+.visual{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-top: 20px;
+  padding: 20px;
+  background: #ffffff;
+}
+
+.visual img{
+  width: 100%;
+  max-width: 294px;
+}
+
+.visual-info{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.complaint-title{
+  font-size: 1em;
+  line-height: 1.6em;
+  font-weight: 600;
+  color: #34495E;
+}
+
+.product-code{
+  margin-bottom: 1em;
+  color: #8596A6;
+}
+
+.product-price{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  border-bottom: 1px solid rgba(133, 150, 166, 0.2);
+  font-size: 1em;
+  font-weight: 600;
+  line-height: 1.9em;
+  color: #34495E;
+}
+
+.remove-border{
+  border: 0!important;
+}
+
+.big-cost{
+  font-size: 1.28em;
+  line-height: 1.6em;
+}
+
+.product-price:last-child span{
+  font-size: 1.4em;
+  line-height: 2.3em;
+}
+
+.product-info{
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1em;
+}
+
+.complaint-articul{
+  font-size: 0.8em;
+  line-height: 1em;
+  color: #8596A6;
+}
+
+.product-status{
+  display: flex;
+  font-size: 0.8em;
+}
+
+.in-stock{
+  margin-right: 15px;
+}
+
+.in-stock,
+.out-of-stock{
+  display: flex;
+  align-items: center;
+}
+
+.in-stock div{
+  display: flex;
+  align-items: center;
+}
+
+.in-stock.active.icon{
+  margin-right: 3px;
+  width: 12px;
+  height: 12px;
+  background: url('../img/product_status_1.svg') center center no-repeat;
+  background-size: contain;
+}
+
+.in-stock.nonactive.icon{
+  margin-right: 5px;
+  width: 12px;
+  height: 12px;
+  background: url('../img/product_status_2.svg') center center no-repeat;
+  background-size: contain;
+}
+
+.visual a{
+  margin-top: 1.42em;
+  font-size: 1em;
+  text-decoration: underline;
+}
+
+.complaint-descr{
+  width: 65%;
+}
+
+.complaint-descr p {
+  margin-top: 1vw;
+  font-size: 1em;
+  line-height: 1.3em;
+  letter-spacing: 0.01em;
+}
+
+.complaint-photo{
+  width: 100%;
+  margin-top: 1vw;
+}
+
+.upload-content{
+  margin-top: 20px;
+}
+
+.files{
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  flex-flow: row wrap;
+}
+
+.image-item{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  position: relative;
+  display: block;
+  width: 8.33vw;
+  height: 192px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+.image-item img{
+  width: 100%;
+  min-width: 100%;
+  min-height: 100%;
+}
+#form-upload {
+  max-width: 160px;
+  min-width: 100%;
+  min-height: 100%;
+  height: 192px;
+  overflow: hidden;
+}
+
+#frm_upload input[type="submit"] {
+  display: none;
+}
+
+.file-select-btn{
+  position: relative;
+  line-height: 0;
+}
+
+.image-upload{
+  height: 191px;
+  position: relative;
+  background: #e6e6e6;
+  border: 1px solid #cbcbcb;
+}
+
+input[type=file]{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+
+.chat-wrap{
+  z-index: 400;
+  position: fixed;
+  bottom: 50px;
+  right: 2.6vw;
+  width: 22.91vw;
+  min-width: 400px;
+}
+
+.chat-header{
+  width: 100%;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3px 10px;
+  border-radius: 3px 3px 0px 0px;
+  background: #D3D6D9;
+}
+
+.chat-body{
+  display: block;
+  width: 100%;
+  height: 50vh;
+  min-height: 400px;
+  padding: 0 10px;
+  overflow: hidden;
+  background: #ffffff;
+  overflow-y: auto;
+}
+
+.chat-body::-webkit-scrollbar {
+  width: 14px;
+  border-radius: 20px;
+}
+
+.chat-body::-webkit-scrollbar-thumb {
+  width: 20px;
+  background: #C4C4C4;
+  border: 5px solid #ffffff;
+  border-radius: 16px;
+}
+
+.chat-body::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+
+.chat-footer{
+  width: 100%;
+  height: 80px;
+  padding: 0 25px 0 15px;
+  background: #ffffff;
+}
+
+.chat-wrap form {
+  display: block;
+  border: 1px solid #D0D0D4;
+  border-radius: 3px;
+  height: 60px;
+  background: white;
+}
+
+.chat-send{
+  width: 88%;
+  float: left;
+  line-height: 0;
+}
+
+.chat-send textarea{
+  outline: none;
+  resize: none;
+  padding: 20px 10px 10px 15px;
+  color: #707683;
+  font-size: 12px;
+  min-height: 50px;
+  border: 0;
+  width: 100%;
+  height: 50px;
+}
+
+.chat-btn{
+  position: relative;
+  float: left;
+  width: 12%;
+  line-height: 50px;
+  cursor: pointer;
+}
+
+.chat-btn input[type="submit"] {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  opacity: 0;
+}
+
+.chat-btn-icon{
+  margin-top: 6px;
+  margin-right: 15px;
+  float: right;
+}
+
+.chat-message{
+  display: table;
+  width: 100%;
+}
+
+.chat-message:last-child{
+  margin-bottom: 2vw;
+}
+
+.message-date{
+  display: table;
+  text-align: center;
+  margin: 10px auto;
+  padding: 5px 38px;
+  font-size: 0.8em;
+  line-height: 1em;
+  color: #979797;
+  background: #F2F2F2;
+  border-radius: 12px;
+}
+
+.message-user,
+.name {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  margin-bottom: 3px;
+}
+
+.name span{
+  font-size: 0.8em;
+  font-weight: normal;
+  color: #979797;
+}
+
+.message-itself{
+  display: block;
+  margin-top: 7px;
+  padding: 5px 15px 10px 15px;
+  font-size: 1em;
+  line-height: 1.5em;
+  color: #000000;
+  border-radius: 4px;
+  width: 94%;
+}
+
+.user-chat{
+  display: inline;
+}
+
+/* чат с сообщениями*/
+.chat-block .chat-message .data {
+  position: relative;
+  color: #979797;
+  font-size: 10px;
+  background: #F2F2F2;
+  text-align: center;
+  display: table;
+  padding: 4px 17px;
+  border-radius: 100px;
+  line-height: 1;
+  margin: 5px auto;
+}
+
+.chat-block .chat-message {
+  padding: 20px 14px 0 14px;
+  display: block;
+  overflow-y: auto;
+}
+
+.chat-block .chat-message .you {
+  background: #F2F2F2;
+  padding: 10px;
+  width: 100%;
+  margin: 0.5vw 0;
+  border-radius: 4px;
+}
+
+.chat-block .chat-message .name {
+  color: #000000;
+  font-size: 14px;
+  font-family: 'Open Sans';
+  margin-bottom: 5px;
+  font-weight: bold;
+  margin-bottom: 3px;
+}
+
+.chat-block .chat-message .text {
+  padding: 0;
+  margin: 0;
+  color: #000000;
+  font-size: 14px;
+}
+
+.chat-block .chat-message .interlocutor {
+  background: #f2f2f2;
+  padding: 10px;
+  width: 100%;
+  margin: 0.5vw 0 0.5vw auto;
+  border-radius: 4px;
+}
+
+
+/* Мобильный ярлык для чата */
+.mob-chat {
+  z-index: 200;
+  display: none;
+  position: fixed;
+  right: 20px;
+  bottom: 80px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: url('../img/chat_mob.jpg') no-repeat;
+  background-size: contain;
+  cursor: pointer;
+  animation: play 2s ease infinite;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+
+@keyframes play {
+
+  0% {
+    transform: scale(1);
+  }
+  15% {
+    box-shadow: 0 0 0 5px rgba(133, 150, 166, 0.4);
+  }
+  25% {
+    box-shadow: 0 0 0 10px rgba(133, 150, 166, 0.4), 0 0 0 4px rgba(133, 150, 166, 0.2);
+  }
+  25% {
+    box-shadow: 0 0 0 8px rgba(133, 150, 166, 0.4), 0 0 0 20px rgba(133, 150, 166, 0.2);
+  }
+
+}

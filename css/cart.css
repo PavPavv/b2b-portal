@@ -1,0 +1,341 @@
+/* =====================================================================================================
+ Общие стили корзины:
+===================================================================================================== */
+
+#cart {
+  display: none;
+  width: 100%;
+}
+
+/* =====================================================================================================
+ Пустая корзина:
+===================================================================================================== */
+
+#cart-empty {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 350px);
+  text-align: center;
+}
+
+#cart-empty .title {
+  margin-bottom: 1.25em;
+}
+
+/* =====================================================================================================
+ Заполненная корзина:
+===================================================================================================== */
+
+#cart-full {
+  display: none;
+}
+
+#cart-full .header {
+  position: -webkit-sticky;
+  position: sticky;
+  justify-content: space-between;
+  align-items: center;
+  top: 104px;
+  padding-top: 2.8rem;
+  padding-bottom: 3em;
+  background-color: #F2F2F2;
+  z-index: 1;
+}
+
+#cart-full .header .search.row {
+  width: 100%;
+  margin-right: 7em;
+}
+
+#cart-full .header .make-order {
+  align-items: center;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+#checkout-info {
+  flex-grow: 0;
+  flex-shrink: 0;
+  margin-right: 2.143em;
+  font-size: 0.857em;
+  visibility: hidden;
+}
+
+.cart-section {
+  margin-bottom: 1.428em;
+  padding: 1.428em;
+  background-color: #F8F8F8;
+}
+
+.cart-section.sold {
+  background-color: #E2E2E2;
+}
+
+.cart-section.sold .checkbox {
+  background-image: url(../img/checkbox_disabled.svg);
+  cursor: default;
+}
+
+.cart-section .head,
+.cart-row {
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1.428em;
+}
+
+.cart-section .head > div,
+.cart-row > div {
+  margin-right: 1.142em;
+}
+
+.cart-section .head .row,
+.cart-row .row:not(.qty) {
+  align-items: center;
+}
+
+.cart-section .head .checkbox,
+.cart-section .head .type {
+  margin-right: 1.428em;
+}
+
+.cart-section .head .question {
+  width: 24px;
+  height: 24px;
+}
+
+.cart-section .head .btn {
+  padding-top: 0.4em;
+  padding-bottom: 0.4em;
+}
+
+.cart-section .head .select-info {
+  justify-content: flex-end;
+  width: 30.5em;
+}
+
+.cart-row {
+  padding-top: 1.428em;
+  border-top: 1px solid #C6C6C6;
+}
+
+.cart-row:last-child {
+  padding-bottom: 0;
+}
+
+.cart-row .qty,
+.cart-row .qty-fix,
+.cart-row .qty-sold,
+.cart-row .tooltips,
+.cart-row .price,
+.cart-row .discount,
+.cart-row .sum {
+  width: 25%;
+}
+
+.cart-row .checkbox {
+  flex-grow: 0;
+  flex-shrink: 0;
+  margin-right: 1.428em;
+}
+
+.cart-row.bonus .checkbox {
+  visibility: hidden;
+}
+
+.cart-row .name {
+  width: 100%;
+  cursor: pointer;
+}
+
+.cart-row .img-wrap {
+  flex-grow: 0;
+  flex-shrink: 0;
+  width: 65px;
+  height: 65px;
+  margin-right: 1.428em;
+}
+
+.cart-row .articul {
+  font-size: 0.857em;
+}
+
+.cart-row .qty,
+.cart-row .qty-fix,
+.cart-row .qty-sold {
+  min-width: 7.5em;
+}
+
+.cart-row.bonus .qty,
+.cart-section.sold .qty {
+  display: none;
+}
+
+.cart-row .qty-fix {
+  display: none;
+}
+
+.cart-row.bonus .qty-fix {
+  display: block;
+}
+
+.cart-row .qty-sold {
+  display: none;
+}
+
+.cart-section.sold .qty-sold {
+  display: block;
+}
+
+.cart-row .tooltips {
+  min-width: 8em;
+}
+
+.cart-row .price,
+.cart-row .discount {
+  text-align: right;
+}
+
+.cart-row .price {
+  min-width: 8em;
+}
+
+.cart-row .discount {
+  min-width: 6em;
+}
+
+.cart-row .sum {
+  justify-content: flex-end;
+  min-width: 11em;
+}
+
+.cart-row .trash.icon {
+  margin-right: 0;
+  margin-left: 0.5em;
+}
+
+/* =====================================================================================================
+ Скопированная корзина:
+===================================================================================================== */
+
+#cart-copy textarea {
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  opacity: 0;
+}
+
+#cart-table {
+  display: none;
+}
+
+/* =====================================================================================================
+Всплывающее окно оформления заказа:
+===================================================================================================== */
+
+#checkout .pop-up {
+  width: 95em;
+}
+
+#checkout .warnblock {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  margin: 0 -2.5em;
+  margin-bottom: 2.5em;
+  padding: 0 2.5em;
+}
+
+#checkout .warnblock .icon {
+  width: 26px;
+  height: 26px;
+  margin: 0.714em;
+  margin-left: 0;
+}
+
+#order-form > .left-side {
+  flex-grow: 0;
+  flex-shrink: 0;
+  margin-right: 2.857em;
+}
+
+#order-form > .right-side {
+  width: 100%;
+}
+
+#address {
+  width: 100%;
+}
+
+#order-form .totals {
+  margin-top: 2.143em;
+  margin-bottom: 1.428em;
+  padding: 1.428em;
+  color: #FFFFFF;
+  background-color: #53606F;
+}
+
+#order-form .totals > .row {
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+#order-form .totals > .row:first-child {
+  padding-bottom: 1.428em;
+  border-bottom: 1px solid #C6C6C6;
+}
+
+#order-form .totals > .row .left-side {
+  margin-bottom: 0.357em;
+  margin-right: 1.428em;
+}
+
+#order-form .totals > .row .right-side {
+  text-align: right;
+}
+
+#order-form .totals .text.orange {
+  font-size: 1.714em;
+  font-weight: 700;
+}
+
+#order-form .totals > .row:last-child {
+  padding-top: 1.428em;
+}
+
+#order-form .btns-wrap {
+  justify-content: flex-start;
+}
+
+#order-details {
+  padding-right: 0.5em;
+  max-height: calc(79vh - 100px);
+  overflow-y: auto;
+}
+
+.order-block:not(:last-child) {
+  margin-bottom: 1.428em;
+}
+
+.order-block .info {
+  flex-grow: 0;
+  flex-shrink: 0;
+  margin-right: 1.428em;
+}
+
+.order-block .info > div:first-child {
+  border-bottom: 1px solid #C6C6C6;
+}
+
+.order-block .info > div > div {
+  margin-bottom: 0.357em;
+}
+
+.order-block .form-wrap {
+  width: 100%;
+}
+
+.order-block textarea {
+  height: 7.143em;
+}

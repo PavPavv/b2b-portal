@@ -1,0 +1,204 @@
+<!-- Карточки товара для ЗИП -->
+<div class="min-card card template" data-id="#object_id#" data-action="#action_id#" onclick="showFullCard(#object_id#)">
+  <div class="card-img">
+    <img src="#image#">
+  </div>
+  <div class="card-title">
+    <div class="title h3">#title#</div>
+  </div>
+  <div class="card-price">
+    <div class="cur-price row #isBorder#">
+      <div class="title">Оптовая цена: </div>
+      <div class="text orange">#price_cur#</div>
+    </div>
+    <div class="old-price row #isPriceRow#">
+      <div class="action pill #isAction#" style="background-color: #actioncolor#">#actiontitle#</div>
+      <div class="text #isOldPrice#">#price#</div>
+    </div>
+  </div>
+  <div class="card-info row">
+    <div class="cart icon in-circle" data-tooltip="В корзине">
+      <div class="qty in-circle full row">0</div>
+    </div>
+  </div>
+</div>
+<div class="big-card card manage row template" data-id="#object_id#" data-action="#action_id#">
+  <div class="carousel" data-type="bigCard">
+    <div class="left-btn"></div>
+    <div class="right-btn"></div>
+    <div class="carousel-gallery-wrap">
+      <div class="carousel-gallery">
+        <div class="carousel-item" onclick="showFullImg(event, #object_id#)">
+          <img src="https://b2b.topsports.ru/c/productpage/#item#.jpg">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card-content">
+    <div class="card-head row">
+      <div class="card-title">
+        <div class="title h3">#title#</div>
+        <div class="articul">Код продукта: #articul#</div>
+      </div>
+      <div class="select-info row">
+        <div class="select-qty">
+          Выбрано товаров:&nbsp;<span class="text orange">0</span> шт.
+        </div>
+        <div class="select-sum">
+          Итого:&nbsp;<span class="text orange">0</span> руб.
+        </div>
+      </div>
+    </div>
+    <div class="card-body row">
+      <div class="card-price">
+        <div class="cur-price row">
+          <div class="title">Оптовая цена: </div>
+          <div class="text orange">#price_cur#</div>
+        </div>
+        <div class="old-price row #isPriceRow#">
+          <div class="action pill #isAction#" style="background-color: #actioncolor#">#actiontitle#</div>
+          <div class="text #isOldPrice#">#price#</div>
+        </div>
+        <div class="user-price row">
+          <div class="title">Розничная цена: </div>
+          <div class="text h3">#price_user#</div>
+        </div>
+        <div class="markup row">
+          <div class="title">Торговая наценка: </div>
+          <div class="text">#markup#%</div>
+        </div>
+        <a class="card-open" onclick="showFullCard(#object_id#)">Раскрыть полностью</a>
+      </div>
+      <div class="card-sizes row">
+        <div class="card-size">
+          <div class="name" data-tooltip="артикул: #articul#">#size#</div>
+          <div class="qty row">
+            <div class="qty-box row">
+              <div class="btn minus" data-tooltip="Уменьшить" onclick="changeCart(event, #object_id#)"></div>
+              <input class="choiced-qty" type="text" value="0" data-value="0" data-id="#object_id#" autocomplete="off" onchange="changeCart(event, #object_id#)" onblur="onBlurInput(this)" onfocus="onFocusInput(this)" onkeypress="return onlyNumb(event)">
+              <div class="btn plus" data-tooltip="Добавить" onclick="changeCart(event, #object_id#)"></div>
+            </div>
+          </div>
+          <div class="tooltips row">
+            <div class="free row #isFree#" data-tooltip="#free_qty# шт.">
+              <span class="free-qty icon"></span>
+              <span>#free_qty#</span>
+            </div>
+            <div class="arrive row #isArrive#" data-tooltip="#arrive_qty# шт. #arrive_date#">
+              <span class="arrive-qty icon"></span>
+              <span>#arrive_qty#</span>
+            </div>
+            <div class="warehouse row #isWarehouse#" data-tooltip="#warehouse_qty# шт.">
+              <span class="warehouse-qty icon"></span>
+              <span>#warehouse_qty#</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="full-card-container" class="pop-up-container">
+  <div class="full-card card manage pop-up" data-id="#object_id#" data-action="#action_id#">
+    <div class="pop-up-title row">
+      <div class="card-title">
+        <div class="title h2">#title#</div>
+        <div class="articul">Код продукта: #articul#</div>
+      </div>
+      <div class="close icon"></div>
+    </div>
+    <div class="pop-up-body">
+      <div class="card-content row">
+        <div class="carousel" data-type="fullCard">
+          <div class="maximize icon"></div>
+          <div class="carousel-gallery-wrap">
+            <div class="left-btn"></div>
+            <div class="right-btn"></div>
+            <div class="carousel-gallery">
+              <div class="carousel-item row">
+                <img src="https://b2b.topsports.ru/c/productpage/#item#.jpg" data-src="https://b2b.topsports.ru/c/source/#item#.jpg">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="card-price">
+            <div class="cur-price row">
+              <div class="title">Оптовая цена: </div>
+              <div class="text orange">#price_cur#</div>
+            </div>
+            <div class="old-price row #isPriceRow#">
+              <div class="action pill #isAction#" style="background-color: #actioncolor#">#actiontitle#</div>
+              <div class="text #isOldPrice#">#price#</div>
+            </div>
+            <div class="user-price row">
+              <div class="title">Розничная цена: </div>
+              <div class="text h3">#price_user#</div>
+            </div>
+            <div class="markup row">
+              <div class="title">Торговая наценка: </div>
+              <div class="text">#markup#%</div>
+            </div>
+          </div>
+          <div class="card-options">
+            <div class="card-option row">
+              <div class="option-title title">#optitle#</div>
+              <div class="option-info">#option#</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="select-info row">
+          <div class="select-qty">
+            Выбрано товаров:&nbsp;<span class="text orange">0</span> шт.
+          </div>
+          <div class="select-sum">
+            Итого:&nbsp;<span class="text orange">0</span> руб.
+          </div>
+        </div>
+        <div class="card-sizes row">
+          <div class="card-size">
+            <div class="name" data-tooltip="артикул: #articul#">#size#</div>
+            <div class="qty row">
+              <div class="qty-box row">
+                <div class="btn minus" data-tooltip="Уменьшить" onclick="changeCart(event, #object_id#)"></div>
+                <input class="choiced-qty" type="text" value="0" data-value="0" data-id="#object_id#" autocomplete="off" onchange="changeCart(event, #object_id#)" onblur="onBlurInput(this)" onfocus="onFocusInput(this)" onkeypress="return onlyNumb(event)">
+                <div class="btn plus" data-tooltip="Добавить" onclick="changeCart(event, #object_id#)"></div>
+              </div>
+            </div>
+            <div class="tooltips row">
+              <div class="free row #isFree#" data-tooltip="#free_qty# шт.">
+                <span class="free-qty icon"></span>
+                <span>#free_qty#</span>
+              </div>
+              <div class="arrive row #isArrive#" data-tooltip="#arrive_qty# шт. #arrive_date#">
+                <span class="arrive-qty icon"></span>
+                <span>#arrive_qty#</span>
+              </div>
+              <div class="warehouse row #isWarehouse#" data-tooltip="#warehouse_qty# шт.">
+                <span class="warehouse-qty icon"></span>
+                <span>#warehouse_qty#</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card-info">
+        <div class="card-options mobile">
+          <div class="card-option row">
+            <div class="option-title title">#optitle#</div>
+            <div class="option-info">#option#</div>
+          </div>
+        </div>
+        <div class="switch close">
+          <div class="head" onclick="switchContent(event)">
+            <div class="title h3">#title#</div>
+            <div class="open white icon switch-icon"></div>
+          </div>
+          <div class="info switch-cont">#info#</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

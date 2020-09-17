@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>ТОП СПОРТС - Пользователи</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="ТОП СПОРТС">
+    <meta name="description" content="ТОП СПОРТС">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../js/check_auth.js"></script>
+    <link rel="icon" href="../img/top_sports_logo_black_short_transparency.png">
+    <link rel="stylesheet" type="text/css" href="../css/fonts.css">
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <link rel="stylesheet" type="text/css" href="../css/media_main.css">
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <link rel="stylesheet" type="text/css" href="media_index.css">
+  </head>
+
+
+  <body data-website="ts_b2b" data-cart="true">
+
+    <div id="main">
+      <div class="container">
+        <div id="main-header" class="row">
+          <div class="title h0">Пользователи</div>
+          <div class="add icon" onclick="openUserPopUp()"></div>
+        </div>
+        <div class="btn" onclick="openUserPopUp()">Добавить</div>
+        <div id="users-table" class="table-wrap active"></div>
+        <div id="users-table-adaptive" class="table-adaptive">
+          <div class="infoblock">
+            <div class="head">
+              <div class="title">#fio#</div>
+              <div class="toggle dark #accessType#" onclick="toggle(event)">
+                <div class="toggle-in"></div>
+              </div>
+            </div>
+            <div class="info row">
+              <div class="wrap row">
+                <div class="lock icon #status#"></div>
+                <div class="content row">
+                  <div>
+                    <div class="title">Должность: <span class="text">#position#</span></div>
+                    <div class="title">Дата рождения: <span class="text">#birth#</span></div>
+                    <div class="title">Пол: <span class="text">#gender#</span></div>
+                  </div>
+                  <div>
+                    <div class="title">Телефон: <a href="tel:#contr_tel#">#tel#</a></div>
+                    <div class="title">Email: <a href="mailto:#contr_mail#">#email#</a></div>
+                    <div class="title">Дата заведения: <span class="text">#date#</span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="edit icon" onclick="openUserPopUp('#id#')"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="user" class="pop-up-container">
+      <div class="pop-up">
+        <div class="pop-up-title row">
+          <div class="title h1"></div>
+          <div class="close icon"></div>
+        </div>
+        <div class="pop-up-body">
+          <form id="user-form" class="post">
+            <div class="form-wrap" required>
+              <div class="title">Имя*</div>
+              <input type="text" value="" name="name" data-type="cyril" placeholder="Введите имя" maxlength="40">
+              <div class="err">Поле заполнено неверно</div>
+            </div>
+            <div class="form-wrap" required>
+              <div class="title">Фамилия*</div>
+              <input type="text" value="" name="surname" data-type="cyril" placeholder="Введите фамилию" maxlength="40">
+              <div class="err">Поле заполнено неверно</div>
+            </div>
+            <div class="form-wrap">
+              <div class="title">Отчество</div>
+              <input type="text" value="" name="patronymic" data-type="cyril" placeholder="Введите отчество" maxlength="40">
+              <div class="err">Поле заполнено неверно</div>
+            </div>
+            <div class="form-cols">
+              <div class="form-col2">
+                <div class="form-wrap" required>
+                  <div class="title">День рождения*</div>
+                  <input type="text" value="" name="birth" data-type="date"  placeholder="ДД.ММ.ГГГГ" maxlength="10">
+                  <div class="err">Поле заполнено неверно</div>
+                </div>
+              </div>
+              <div class="form-col2">
+                <div class="form-wrap" required>
+                  <div class="title">Пол*</div>
+                  <div class="row select-choice">
+                    <div class="option row select-qty">
+                      <input type="radio" value="Мужской" name="gender">
+                      <div class="radio icon"></div>
+                      <div>Мужской</div>
+                    </div>
+                    <div class="option row">
+                      <input type="radio" value="Женский" name="gender">
+                      <div class="radio icon"></div>
+                      <div>Женский</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-wrap" required>
+              <div class="title">Должность*</div>
+              <input type="text" value="" name="position" placeholder="Введите должность" maxlength="40">
+            </div>
+            <div class="form-cols">
+              <div class="form-col2">
+                <div class="form-wrap" required>
+                  <div class="title">Телефон*</div>
+                  <input type="text" value="" name="tel" data-type="tel" placeholder="+7 ( _ _ _ ) _ _ _ -_ _ -_ _" maxlength="16">
+                  <div class="err">Поле заполнено неверно</div>
+                </div>
+              </div>
+              <div class="form-col2">
+                <div class="form-wrap" required>
+                  <div class="title">Email*</div>
+                  <input type="text" value="" name="email" data-type="email" placeholder="Введите email" maxlength="50">
+                  <div class="err">Поле заполнено неверно</div>
+                </div>
+              </div>
+            </div>
+            <div class="form-wrap" required>
+              <div class="form-cols access">
+                <div class="form-col2">
+                  <div class="title">Тип доступа*</div>
+                  <div class="option row">
+                    <input type="radio" value="Полный" name="access">
+                    <div class="radio icon"></div>
+                    <div>Полный</div>
+                  </div>
+                  <div class="option row">
+                    <input type="radio" value="Частичный" name="access">
+                    <div class="radio icon"></div>
+                    <div>Частичный</div>
+                  </div>
+                </div>
+                <div class="form-col2">
+                  <div class="text midlight">Пользователи с полным доступом могут создавать новых пользователей и просматривать все заказы.</div>
+                  <div class="text midlight">Пользователи с частичным доступом не могут создавать новых пользователей, видят только свои заказы</div>
+                </div>
+              </div>
+            </div>
+            <div class="btns-wrap">
+              <input class="btn sub-act" type="submit" value="Отправить" disabled>
+            </div>
+          </form>
+        </div>
+        <div class="loader">
+          <div class="loader icon"></div>
+          <div class="text">Пожалуйста, подождите</div>
+        </div>
+      </div>
+    </div>
+
+    <script src ="../js/main.js"></script>
+    <script src="../js/table.js"></script>
+    <script src="../js/test.js"></script>
+    <script src ="../js/calendar.js"></script>
+    <script src ="index.js"></script>
+  </body>
+</html>

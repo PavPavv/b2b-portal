@@ -1,0 +1,255 @@
+.artboard-title {
+  font-size: 22px;
+  color: blue;
+  margin-bottom: 1em;
+}
+
+.arboard-block {
+  flex-wrap: wrap;
+  margin-bottom: 2em;
+}
+
+.pop-up {
+  width: 64em;
+}
+
+.inform-temp >:first-child {
+  margin-right: 5em;
+}
+
+.text-white-temp {
+  background-color: #34495E;
+}
+
+.icons-temp {
+  font-size: 40px;
+}
+
+.btns-temp .btn {
+  margin-right: 1em;
+}
+
+.tooltips-temp > div > div {
+  display: inline-block;
+  margin-right: 1.5em;
+}
+
+.icons-temp .carousel.for-slider {
+  width: 80px;
+  height: 60px;
+  margin-right: 1em;
+  visibility: visible;
+}
+
+.icons-temp .carousel.for-slider .left-btn,
+.icons-temp .carousel.for-slider .right-btn {
+  width: 30px;
+  background-size: 30px;
+  opacity: 0.5;
+}
+
+.icons-temp .carousel.for-card {
+  width: 40px;
+  height: 40px;
+  margin-right: 1em;
+  visibility: visible;
+}
+
+.icons-temp .carousel.for-card .left-btn,
+.icons-temp .carousel.for-card .right-btn {
+  width: 10px;
+  background-size: 10px;
+  opacity: 0.5;
+}
+
+.check-temp .row,
+.radio-temp .row {
+  align-items: center;
+  cursor: pointer;
+}
+
+.search-temp .example {
+  position: relative;
+  justify-content: flex-end;
+  align-items: center;
+  height: 40px;
+  width: 360px;
+  background-color: #53606F;
+}
+
+form.search.positioned {
+  right: 5px;
+}
+
+.scroll-temp .exapmle {
+  height: 150px;
+  overflow: auto;
+}
+
+.switch-temp .row {
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em;
+  background-color: #53606F;
+  cursor: pointer;
+}
+
+/* Стили для всплывающей формы (образец из раздела Контрагенты): */
+
+#form-example form.post > .title {
+  font-size: 0.857em;
+  margin-bottom: 2em;
+}
+
+#form-example form.post > .row > .row {
+  align-items: center;
+}
+
+#form-example form.post > .row {
+  flex-wrap: wrap;
+}
+
+#form-example form.post > .row .form-wrap input {
+  width: 16.5em;
+}
+
+#form-example form.post > .row .form-wrap:last-child input {
+  width: 8em;
+}
+
+#inn-loader {
+  width: 2.4em;
+  height: 2.4em;
+  margin-right: 2em;
+  visibility: hidden;
+}
+
+@media only screen and (max-width: 480px) {
+  #form-example form.post > .row {
+    display: block;
+  }
+}
+
+/*
+Стили для таблицы
+!!! Обязательно нужно указать min-width для всех столбцов таблицы
+    через отдельный селектор с id таблицы и :nth-child()
+    в файле index.css, лежащем вместе с файлом html страницы.
+    Это необходимо для того, чтобы после загрузки все заголовки были видны целиком, даже если контент колонки уже.
+
+    Также при необходимости в селекторе можно указать:
+    - max-width (чтобы после загрузки не было скролла)
+    - text-align (когда необходимо установить выравнивание отличное от left)
+*/
+
+.table-temp .h1 {
+  margin-top: 2em;
+}
+
+.infoblock .row {
+  align-items: center;
+}
+
+.table-wrap {
+  max-height: 100vh;
+}
+
+/* Стили для таблицы 1 */
+
+#table1 td:nth-child(1) {
+  min-width: 20em;
+}
+
+#table1 td:nth-child(2) {
+  min-width: 20em;
+  text-align: center;
+}
+
+#table1 td:nth-child(3) {
+  min-width: 20em;
+  text-align: center;
+}
+
+#table1 td:nth-child(4) {
+  min-width: 20em;
+}
+
+#table1 td:nth-child(5) {
+  min-width: 20em;
+}
+
+#table1 td:nth-child(6) {
+  min-width: 20em;
+}
+
+#table1 td:nth-child(7) {
+  min-width: 20em;
+}
+
+#table1 td:nth-child(8) {
+  min-width: 20em;
+}
+
+#table1 td:nth-child(9) {
+  min-width: 20em;
+}
+
+#table1 td:nth-child(10) {
+  min-width: 20em;
+}
+
+#table1 td:nth-child(11) {
+  min-width: 20em;
+}
+
+#table1 td:nth-child(12) {
+  min-width: 20em;
+}
+
+#table1 td:nth-child(13) {
+  min-width: 20em;
+}
+
+#table1 td:nth-child(14) {
+  min-width: 20em;
+}
+
+#table1 td:nth-child(15) {
+  min-width: 20em;
+}
+
+/* Стили для таблицы 2 */
+
+#table2 td:nth-child(1) {
+  min-width: 5em;
+  text-align: center;
+}
+
+#table2 td:nth-child(2) {
+  min-width: 10em;
+}
+
+#table2 td:nth-child(3) {
+  min-width: 12em;
+}
+
+#table2 td:nth-child(4) {
+  min-width: 20em;
+}
+
+#table2 td:nth-child(5) {
+  min-width: 15em;
+  text-align: center;
+}
+
+#table2 td:nth-child(6) {
+  min-width: 20em;
+}
+
+#table2 td:nth-child(7) {
+  min-width: 12em;
+}
+
+#table2 td:nth-child(8) {
+  min-width: 20em;
+}

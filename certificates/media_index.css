@@ -1,0 +1,46 @@
+@media (max-width:  867px) {
+  #brands-select {
+    width: 11em;
+  }
+
+}
+
+@media (max-width: 767px) {
+  #cert-date,
+  #cert-brand {
+    display: none;
+  }
+
+  .cert-filters.row {
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+
+  .cert-filters {
+    top: 39px;
+  }
+
+  #certs-filters .filter {
+    padding-bottom: 0;
+  }
+  
+}
+
+@media (max-width: 411px) {
+  #cert-data .item {
+    flex-direction: column;
+  }
+
+  #cert-data .item .cont {
+    margin-top: 20px;
+  }
+
+  form.search {
+    width: 100%;
+  }
+
+  .cert-filters > div {
+    margin-right: 0;
+  }
+
+}

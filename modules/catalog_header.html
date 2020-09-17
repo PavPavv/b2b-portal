@@ -1,0 +1,69 @@
+<!-- Второй уровень меню -->
+<div id="header-menu">
+  <div class="container row">
+    <div class="topmenu row">
+      <a class="topmenu-item active" href="../#id#" data-title="#title#" onclick="openPage(event)">#title#</a>
+    </div>
+    <div class="submenu row">
+      <a class="submenu-item" href="../#id#/?#cat#" data-title="#cat_title#" onclick="openPage(event)">#cat_title#</a>
+    </div>
+    <form id="page-search" class="search positioned row">
+      <input type="text" data-value=""> <!-- здесь нельзя использовать placeholder -->
+      <input class="search icon" type="submit" value="">
+      <div class="close icon"></div>
+    </form>
+  </div>
+  <!-- "Прилипающая" часть каталога -->
+  <div id="header-cart" class="template">
+    <div class="wrap">
+      <div class="items">
+        <a class="cart-#id# item col #isFull#" href="../#id#/?cart" data-title="Корзина" onclick="#isFunc#">
+          <div class="row">
+            <div class="sum"><span>#sum#</span>&nbsp;руб.</div>
+            <div class="cart icon white">
+              <div class="qty in-circle row">#qty#</div>
+            </div>
+          </div>
+          <div class="name">#title#</div>
+        </a>
+      </div>
+      <div class="totals item row text orange">Итого:&nbsp;<span>#sum#</span>&nbsp;руб.</div>
+    </div>
+  </div>
+</div>
+<div id="header-content">
+  <div class="container row">
+    <div class="clear-filter btn sub-act disabled" onclick="clearFilters(event)">Сбросить фильтры</div>
+    <div class="gallery-head row">
+      <div class="search-info row" data-search="page-search">
+        <div class="pill ctr checked">Результаты поиска ("<span class="search-text"></span>" - <span class="search-count">0</span>)</div>
+      </div>
+      <div class="search-info row" data-search="oem">
+        <div class="pill ctr checked">Результаты поиска ("<span class="search-text"></span>" - <span class="search-count">0</span>)</div>
+      </div>
+      <div id="filters-info" class="row template">
+        <div class="pill ctr checked" data-key="#key#" data-value="#value#" onclick="selectFilterCatalog(event)">#title#</div>
+      </div>
+      <div class="sortbox row">
+        <div class="view row">
+          <div class="title">Вид каталога:</div>
+          <div class="view-blocks icon active" data-tooltip="Плитка" onclick="toggleView(event, 'blocks')"></div>
+          <div class="view-list icon" data-tooltip="Cписок" onclick="toggleView(event, 'list')"></div>
+        </div>
+        <div id="gallery-sort" class="activate select">
+          <div class="head row">
+            <div class="title">Сортировать по</div>
+            <div class="triangle icon"></div>
+          </div>
+          <div class="drop-down">
+            <div class="item" data-value="default">По умолчанию</div>
+            <div class="item" data-value="title">По наименованию</div>
+            <div class="item" data-value="price1">Цена по возрастанию</div>
+            <div class="item" data-value="-price1">Цена по убыванию</div>
+            <div class="item" data-value="-is_new">Новые поступления</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

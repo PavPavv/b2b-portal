@@ -1,0 +1,802 @@
+/* =====================================================================================================
+Основные стили:
+===================================================================================================== */
+
+body {
+  padding-top: 102px;
+}
+
+/* =====================================================================================================
+Стили для второго уровня меню:
+===================================================================================================== */
+
+#header.mobile #header-menu {
+  display: none !important;
+}
+
+#header-menu {
+  display: none;
+  position: relative;
+  color: #FFFFFF;
+  background-color: #53606F;
+}
+
+#header-menu .container {
+  justify-content: flex-start;
+  align-items: stretch;
+  padding-right: 16em;
+}
+
+#header-menu a {
+  color: #FFFFFF;
+}
+
+#header-menu .topmenu a,
+#header-menu .submenu a {
+  padding: 0.75em 1.5em;
+  cursor: pointer;
+}
+
+#header-menu .topmenu {
+  align-items: stretch;
+  background-color: #34495E;
+}
+
+#header-menu .topmenu-item {
+  min-width: 18em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+#header-menu .submenu {
+  align-items: stretch;
+  flex-wrap: wrap;
+  background-color: #53606F;
+}
+
+#header-menu .submenu-item {
+  margin-right: 0.1rem;
+  -webkit-transition: 200ms;
+  -moz-transition: 200ms;
+  -o-transition: 200ms;
+  transition: 200ms;
+}
+
+#header-menu .submenu-item:hover {
+  background-color: #F05A28;
+}
+
+#header-menu .submenu-item.active {
+  background-color: #F05A28;
+}
+
+#page-search {
+  display: none;
+  top: 0.2em;
+  right: calc(4rem + 16em);
+}
+
+#page-search:focus-within {
+  width: 20em;
+}
+
+#header-cart {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: calc(4rem + 16em);
+  background-color: #34495E;
+  overflow: hidden;
+  z-index: 2;
+}
+
+#header-cart .wrap {
+  height: 2.857em;
+  max-height: 2.857em;
+  -webkit-transition: max-height 0.3s linear;
+  -moz-transition: max-height 0.3s linear;
+  -o-transition: max-height 0.3s linear;
+  transition: max-height 0.3s linear;
+  overflow: hidden;
+}
+
+#header-cart:hover .wrap {
+  height: auto;
+  max-height: 350px;
+  overflow: visible;
+}
+
+#header-cart .items,
+#header-cart .total {
+  width: 100%;
+}
+
+#header-cart .item {
+  justify-content: center;
+  align-items: flex-start;
+  height: 4em;
+  width: 100%;
+  padding: 0 4rem 0 2em;
+  border-bottom: 1px solid rgba(204, 204, 204, 0.5);
+}
+
+#header-cart .item > .row {
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+#header-cart .name {
+  font-size: 0.857em;
+  visibility: hidden;
+}
+
+#header-cart:hover .name {
+  visibility: visible;
+}
+
+#header-cart .cart.icon {
+  position: relative;
+  width: 21px;
+  height: 21px;
+  margin-right: 1.4em;
+}
+
+#header-cart .qty.in-circle {
+  top: -4.5px;
+  right: -9px;
+}
+
+#header-cart .totals {
+  justify-content: flex-start;
+  align-items: center;
+  border-bottom: none;
+  cursor: default;
+}
+
+/* =====================================================================================================
+Стили для "прилипающей" части каталога:
+===================================================================================================== */
+
+#header.mobile #header-content {
+  display: none !important;
+}
+
+#header-content {
+  display: none;
+  background-color: #F2F2F2;
+}
+
+#header-content .container {
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-top: 1.785em;
+}
+
+.clear-filter.btn {
+  width: 18em;
+  padding: 0.215em 1.5em;
+  margin-bottom: 0.714em;
+}
+
+.gallery-head {
+  justify-content: flex-end;
+  align-items: flex-start;
+  width: calc(100% - 20em);
+  border-bottom: 1px solid #C6C6C6;
+}
+
+.gallery-head .pill {
+  background-color: #D3D6D9;
+  margin-bottom: 0.714em;
+}
+
+.gallery-head .pill .close.icon {
+  display: inline-block;
+}
+
+.search-info,
+#filters-info {
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.search-info {
+  display: none;
+}
+
+#filters-info .pill {
+  max-width: 15em;
+}
+
+.sortbox {
+  justify-content: flex-end;
+  align-items: center;
+  flex-grow: 0;
+  flex-shrink: 0;
+  padding-bottom: 0.714em;
+}
+
+.view {
+  justify-content: space-between;
+  align-items: center;
+  flex-shrink: 0;
+  margin-right: 2.5em;
+}
+
+#main.zip .view {
+  display: none;
+}
+
+.view .title {
+  margin-right: 1em;
+  line-height: 0;
+}
+
+.view .icon {
+  margin-right: 0.5em;
+}
+
+.view .icon:last-child {
+  margin-right: 0;
+}
+
+.view .icon.active {
+  cursor: default;
+}
+
+.sortbox .activate .head {
+  padding: 0.143em 1.5rem;
+}
+
+#gallery-sort {
+  width: 14.5em;
+}
+
+/* =====================================================================================================
+Заголовок страницы:
+===================================================================================================== */
+
+#main-header {
+  justify-content: flex-start;
+  padding-bottom: 0;
+}
+
+/* =====================================================================================================
+Иконки:
+===================================================================================================== */
+
+.view-list.icon {
+  width: 18px;
+  height: 14px;
+  background-image: url(../img/view_list.svg);
+}
+
+.view-blocks.icon {
+  width: 14px;
+  height: 14px;
+  background-image: url(../img/view_blocks.svg);
+}
+
+.view-list.icon.active {
+  background-image: url(../img/view_list_active.svg);
+}
+
+.view-blocks.icon.active {
+  background-image: url(../img/view_blocks_active.svg);
+}
+
+.free-qty.icon {
+  background-image: url(../img/qty_free.svg);
+}
+
+.arrive-qty.icon {
+  background-image: url(../img/qty_arrive.svg);
+}
+
+.warehouse-qty.icon {
+  background-image: url(../img/qty_warehouse.svg);
+}
+
+/* =====================================================================================================
+Стили для основного содержимого:
+===================================================================================================== */
+
+#content {
+  display: none;
+  min-height: 60vh;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+#main-header {
+  display: none;
+}
+
+/* =====================================================================================================
+Стили блока фильтров:
+===================================================================================================== */
+
+#filters-container {
+  display: none;
+  width: calc(18em + 7px);
+}
+
+#filters {
+  position: static;
+  width: calc(18em + 7px);
+  min-height: 50vh;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#filters:hover {
+  overflow-y: auto;
+}
+
+.filters .checked > div > .title .checkbox.icon,
+.filters .checked.title .checkbox.icon {
+  background-image: url(../img/checkbox_checked_blue.svg);
+}
+
+.pop-up-container.filters .btn {
+  background-color: #34495E
+}
+
+.pop-up-container.filters .btn:hover,
+.pop-up-container.filters .btn:active {
+  background-color: #2C3E50;
+}
+
+/* =====================================================================================================
+Стили для фильтров OEM:
+===================================================================================================== */
+
+#main.equip #zip-filters {
+  display: none;
+}
+
+#zip-filters:not(.close) {
+  margin-bottom: 0.5em;
+  padding: 0;
+}
+
+#zip-filters > .title {
+  background-color: #F05A28;
+}
+
+#zip-filters > .items {
+  background-color: #F2C94C;
+  border: 1px solid #F05A28;
+  padding: 0.714em;
+}
+
+#zip-filters .activate {
+  width: 100%;
+  margin-bottom: 0.6em;
+}
+
+#zip-filters .activate .head,
+#zip-filters .search input {
+  padding-top: 0.11em;
+  padding-bottom: 0.11em;
+}
+
+#zip-filters .activate.open .drop-down {
+  max-height: 15em;
+}
+
+#zip-filters .search {
+  margin-bottom: 0;
+}
+
+/* =====================================================================================================
+Стили для фильтров каталога:
+===================================================================================================== */
+
+#filter-size > .items,
+#filter-color > .items {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0 auto;
+  padding: 0.714em;
+  padding-bottom: 0;
+}
+
+#filter-size.close > .items,
+#filter-color.close > .items {
+  display: none;
+}
+
+#filter-size > .items .item > .row,
+#filter-color > .items .item > .row {
+  padding: 0;
+}
+
+#filter-size .checkbox,
+#filter-color .checkbox,
+#filter-size .item .open.icon,
+#filter-color .item .open.icon {
+  display: none;
+}
+
+#filter-size .text {
+  width: 2.75em;
+  padding: 0;
+  font-size: 0.857em;
+  line-height: 1.4;
+  border: 1px solid #B3B3B3;
+  border-radius: 3px;
+  text-transform: uppercase;
+  text-align: center;
+  margin-right: 0.417em;
+  margin-bottom: 0.417em;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
+}
+
+#filter-size .item.checked .text {
+  color: #FFFFFF;
+  background-color: #34495E;
+  border: 1px solid #34495E;
+}
+
+#filter-color .item .title.row {
+  width: 25px;
+  height: 25px;
+  margin: 4px;
+  font-size: 0px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+#filter-color .item:hover .title.row {
+  transform: scale(1.12, 1.12);
+}
+
+#filter-color .item.checked .title.row {
+  background-position-x: -25px;
+}
+
+#filter-color .item.disabled .title.row {
+  display: none;
+}
+
+#filter-color .item[data-value="white"] .title.row {
+  background-image: url(../img/colors/color_white.png);
+}
+
+#filter-color .item[data-value="black"] .title.row {
+  background-image: url(../img/colors/color_black.png);
+}
+
+#filter-color .item[data-value="grey"] .title.row {
+  background-image: url(../img/colors/color_gray.png);
+}
+
+#filter-color .item[data-value="brown"] .title.row {
+  background-image: url(../img/colors/color_brown.png);
+}
+
+#filter-color .fitem[data-value="blue"] .title.row {
+  background-image: url(../img/colors/color_blue.png);
+}
+
+#filter-color .item[data-value="cyan"] .title.row {
+  background-image: url(../img/colors/color_lightblue.png);
+}
+
+#filter-color .item[data-value="turquoise"] .title.row {
+  display: none;
+  /* background-image: url(../img/colors); */
+}
+
+#filter-color .item[data-value="bordo"] .title.row {
+  display: none;
+  /* background-image: url(../img/colors); */
+}
+
+#filter-color .item[data-value="red"] .title.row {
+  background-image: url(../img/colors/color_red.png);
+}
+
+#filter-color .item[data-value="pink"] .title.row {
+  background-image: url(../img/colors/color_pink.png);
+}
+
+#filter-color .item[data-value="green"] .title.row {
+  background-image: url(../img/colors/color_green.png);
+}
+
+#filter-color .item[data-value="yellow"] .title.row {
+  background-image: url(../img/colors/color_yellow.png);
+}
+
+#filter-color .item[data-value="orange"] .title.row {
+  background-image: url(../img/colors/color_orange.png);
+}
+
+#filter-color .item[data-value="fiol"] .title.row {
+  background-image: url(../img/colors/color_purple.png);
+}
+
+#filter-color .item[data-value="fuxy"] .title.row {
+  display: none;
+  /* background-image: url(../img/colors); */
+}
+
+#filter-color .item[data-value="camo"] .title.row {
+  display: none;
+  /* background-image: url(../img/colors); */
+}
+
+#filter-color .item[data-value="haki"] .title.row {
+  background-image: url(../img/colors/color_khaki.png);
+}
+
+#filter-color .item[data-value="multicolor"] .title.row {
+  background-image: url(../img/colors/color_colorful.png);
+}
+
+#filter-color .item[data-value="transparent"] .title.row {
+  background-image: url(../img/colors/color_transparent.png);
+}
+
+#filter-color .item[data-value="black/pink"] .title.row {
+  display: none;
+  /* background-image: url(../img/colors); */
+}
+
+#filter-color .item[data-value="black/grey"] .title.row {
+  display: none;
+  /* background-image: url(../img/colors); */
+}
+
+#filter-color .item[data-value="metallic"] .title.row{
+  display: none;
+  /* background-image: url(../img/colors); */
+}
+
+#filter-color .item[data-value="graphite"] .title.row {
+  display: none;
+  /* background-image: url(../img/colors); */
+}
+
+/* =====================================================================================================
+ Стили для галереи:
+===================================================================================================== */
+
+/* Стили для галереи: */
+
+#gallery {
+  display: none;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  width: calc(100% - 20em);
+}
+
+#gallery-notice {
+  display: none;
+  width: calc(100% - 20em);
+  min-height: 30vh;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 1.15em;
+}
+
+/* =====================================================================================================
+ Стили для малой карточки:
+===================================================================================================== */
+
+.min-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 18em;
+  margin: 0 -1px -1px 0;
+  padding: 1em;
+  border: 1px solid #C6C6C6;
+  cursor: pointer;
+}
+
+.min-card:hover {
+  border: 1px solid #34495E !important;
+  z-index: 1;
+}
+
+.min-card .card-img {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 10.5em;
+  overflow: hidden;
+}
+
+.min-card .card-title {
+  width: 100%;
+  margin-bottom: 0.714em;
+}
+
+.min-card .card-title .title {
+  width: 100%;
+  height: 4.2em;
+  line-height: 22px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.min-card .card-price {
+  width: 100%;
+  height: 4.7em;
+  margin-bottom: 1em;
+}
+
+.min-card .card-price .cur-price .text {
+  font-size: 1.143em;
+  font-weight: 600;
+}
+
+.min-card .card-info {
+  justify-content: space-between;
+  text-align: center;
+  height: 1.7em;
+}
+
+.min-card .tooltips {
+  align-items: center;
+  height: 100%;
+}
+
+.min-card .cart.icon {
+  display: none;
+  position: relative;
+  width: 24px;
+  height: 24px;
+  margin-right: 0.3em;
+  cursor: help;
+}
+
+.min-card .qty.in-circle {
+  top: -4.3px;
+  right: -7px;
+}
+
+/* =====================================================================================================
+ Стили для большой карточки:
+===================================================================================================== */
+
+/* Стили для большой карточки экипировки: */
+
+.big-card {
+  position: relative;
+  align-items: stretch;
+  width: 100%;
+  height: 18em;
+  margin-bottom: 0.714em;
+  padding: 1em;
+  border: 1px solid #C6C6C6;
+  overflow: hidden;
+}
+
+.big-card:first-child {
+  border-top: none;
+}
+
+.big-card .carousel {
+  align-self: center;
+  flex-grow: 0;
+  flex-shrink: 0;
+  width: 20em;
+  padding: 0 28px;
+  margin-right: 1.428em;
+}
+
+.big-card .carousel .left-btn,
+.big-card .carousel .right-btn {
+  width: 28px;
+  background-size: 24px;
+  opacity: 0.5;
+}
+
+.big-card .carousel .left-btn:hover,
+.big-card .carousel .right-btn:hover {
+  opacity: 1;
+}
+
+.big-card .card-content {
+  width: 100%;
+}
+
+.big-card .card-head {
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  margin-bottom: 0.714em;
+}
+
+.big-card .card-title {
+  width: 100%;
+  margin-right: 1.428em;
+}
+
+.big-card .card-price {
+  width: 16em;
+  margin-right: 2em;
+}
+
+.big-card .card-sizes {
+  width: 100%;
+  height: 11.5em;
+  overflow: hidden;
+}
+
+/* Стили для большой карточки ЗИП: */
+
+#main.zip .big-card {
+  height: 17em;
+  min-height: 17em;
+}
+
+#main.zip .big-card.open {
+  height: auto !important;
+}
+
+#main.zip .big-card .left-side {
+  width: 60%;
+}
+
+#main.zip .big-card .card-title {
+  width: 100%;
+}
+
+#main.zip .big-card .card-select {
+  width: calc(100% - 14em);
+}
+
+#main.zip .big-card .card-sizes {
+  width: 100%;
+  margin-bottom: 1.5em;
+}
+
+#main.zip .big-card .select-info {
+  width: 100%;
+  padding-left: 4em;
+}
+
+#main.zip .big-card .right-side {
+  justify-content: flex-start;
+  width: 40%;
+}
+
+#main.zip .big-card .card-options {
+  height: auto;
+  overflow: visible;
+  margin-bottom: 1.5em;
+}
+
+#main.zip .big-card .option-title {
+  min-width: 14em;
+  max-width: 14em;
+}
+
+#main.zip .big-card .details {
+  right: 1em;
+  top: 1em;
+}
+
+/* =====================================================================================================
+ Стили для полной карточки:
+===================================================================================================== */
+

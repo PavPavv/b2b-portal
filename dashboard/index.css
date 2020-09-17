@@ -1,0 +1,820 @@
+.dashboard-wrap {
+	display: flex;
+	width: 100%;
+}
+
+/* Контейнер с баннерами */
+aside{
+	display: flex;
+	flex: 1;
+}
+
+.banners{
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+.banners > * {
+	margin-bottom: 20px;
+}
+
+.banner{
+	width: 100%;
+}
+
+.banner img{
+	width: 100%;
+}
+
+/* Основной контент-контейнер */
+main{
+	flex: 3;
+	margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+/* Взаиморасчеты */
+
+.settle{
+	width: 100%;
+	padding: 0 0.625em  0.9375em  1.25em;
+	background: #53606F;
+}
+
+.settle-title{
+	text-transform: uppercase;
+	font-weight: normal;
+	font-size: 1.75em;
+	line-height: 2.15em;
+	color: #ffffff;
+}
+
+.settle-blocks{
+	display: flex;
+	width: 100%;
+}
+
+.settle-block{
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	width: calc(100% / 4);
+	padding: 0 0.9375em;
+	border-right: 1px solid #ffffff;
+	color: #ffffff;
+}
+
+.settle-block:first-child{
+	padding-left: 0;
+}
+
+.settle-block:last-child{
+	border: none;
+}
+
+.settle-block .attention{
+	position: absolute;
+  right: 10px;
+  bottom: 30px;
+	display: block;
+	width: 136px;
+	height: 1.8875em;
+	padding: 0 10px;
+	border-radius: 37px;
+	font-size: 1em;
+	line-height: 1.8875em;
+	text-align: right;
+	color: #ffffff;
+	background: #D70C17 url('../img/attention_white.svg') no-repeat 12px center;
+	background-size: 17px;
+}
+
+.center-col{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.txt{
+	padding-top: 1.85em;
+	padding-left: 0.625em;
+	font-size: 0.875em;
+	color: #666666;
+}
+
+.lines{
+  display: flex;
+  flex-direction: column;
+}
+
+.line{
+	display: flex;
+	align-items: center;
+	font-size: 0.75em;
+	margin-bottom: 0.5em;
+}
+
+.line:last-child,
+.line:nth-child(4){
+	margin-bottom: 0;
+}
+
+.line-status{
+  display: flex;
+  flex-direction: column;
+  height: 3.3875em;
+  justify-content: space-between;
+}
+
+.line4{
+  align-items: flex-start;
+  justify-content: flex-start;
+  height: 3.3875em;
+}
+
+.line-ic{
+  min-width: 30px;
+	width: 30px;
+	height: 30px;
+	margin-right: 0.8em;
+	background: url('../img/wallet.svg') no-repeat center center;
+	background-size: contain;
+}
+
+.line-title{
+	font-size: 1.35em;
+	font-weight: 600;
+}
+
+.line-money{
+	display: flex;
+	align-items: flex-end;
+	justify-content: space-between;
+}
+
+.money{
+	font-size: 2.25em;
+	font-weight: bold;
+	line-height: 0.8em;
+	color: #ffffff;
+}
+
+/* Основной график и таблица */
+
+.section-head.col-wrapper.row {
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #cccccc;
+  padding: 20px;
+}
+
+.section-head {
+  padding: 20px;
+}
+
+.info-wrap {
+  display: flex;
+}
+
+.info-wrap.row {
+  padding: 0 20px 20px 20px;
+}
+
+.info-wrap.switch-cont.row{
+  align-items: stretch;
+}
+
+.infoblock{
+  margin-top: 20px;
+}
+
+.graphic-btns{
+	display: flex;
+	align-items: center;
+}
+
+.graphic-btns1{
+  display: none;
+}
+
+.preorder-toggle{
+	display: flex;
+	align-items: center;
+}
+
+.toggle-name{
+  padding-right: 8px;
+	padding-bottom: 1px;
+	font-size: 0.875em;
+	color: #666666;
+}
+
+.open.white.icon{
+	display: none;
+	width: 1.1875em;
+  height: 0.625em;
+}
+
+.table-btns{
+	display: flex;
+	justify-content: space-between;
+	margin-left: 3.225em;
+}
+
+.table-btns > * {
+	margin-right: 1.6em;
+  user-select: none;
+  cursor: pointer;
+}
+
+.toggleTableBtns{
+  display: none;
+}
+
+.table-btn:last-child{
+	margin-right: 0;
+}
+
+.col1,
+.col2{
+	display: flex;
+	flex-direction: column;
+}
+
+.col1{
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	min-width: calc(1360px / 3);
+}
+
+.col2{
+	flex: 2;
+}
+
+.border-title{
+	border-top: 1px solid #cccccc;
+}
+
+/* Стили для тоггла кнопок десктопа */
+
+.table-btn {
+	/* width: 110px;
+	height: 28px; */
+  padding: 4px 30px 4px 10px;
+  border: 1px solid transparent;
+	border-radius: 20px;
+	text-align: center;
+	font-size: 0.875em;
+	color: #B3B3B3;
+  background: #E3E3E3;
+  outline: none;
+  user-select: none;
+  -webkit-transition: linear 0.1s;
+  -moz-transition: linear 0.1s;
+  -o-transition: linear 0.1s;
+  transition: linear 0.1s;
+}
+
+.status1 {
+	position: relative;
+  color: #ffffff;
+	background: #2C6DA8;
+}
+
+.status2 {
+	position: relative;
+  color: #ffffff;
+	background: #F69C00;
+}
+
+.status3 {
+	position: relative;
+  color: #ffffff;
+	background: #6C4D77;
+}
+
+.status4 {
+	position: relative;
+  color: #ffffff;
+	background: #3F9726;
+}
+
+.status1 .st-ic,
+.status2 .st-ic,
+.status3 .st-ic,
+.status4 .st-ic{
+	position: absolute;
+	right: 10px;
+	top: 8px;
+	width: 11px;
+	height: 11px;
+	background: url('../img/close_white.svg') no-repeat center right;
+	background-size: contain;
+}
+/* Цветовая гамма статусов заказа - неактивные */
+/* - для чего эти стили, должны ли перекликаться с предыдущими? */
+
+.vputi.table-btn {
+  padding: 4px 10px 4px 10px;
+  color: #2C6DA8;
+  background-color: #EAF0F6;
+  border: 1px solid #2C6DA8;
+}
+
+.vnali.table-btn {
+  padding: 4px 10px 4px 10px;
+  color: #F69C00;
+  background-color: #FEF5E5;
+  border: 1px solid #F69C00;
+}
+
+.sobrn.table-btn {
+  padding: 4px 10px 4px 10px;
+  color: #6C4D77;
+  background-color: #F0EDF1;
+  border: 1px solid #6C4D77;
+}
+
+.otgrz.table-btn {
+  padding: 4px 10px 4px 10px;
+  color: #3F9726;
+  background-color: #ECF5E9;
+  border: 1px solid #3F9726;
+}
+
+.nedop.table-btn {
+  padding: 4px 10px 4px 10px;
+  color: #8596A6;
+  background-color: #F3F4F6;
+  border: 1px solid #8596A6;
+}
+
+/* Таблица "Заказы в работе" на Сашином старом шаблоне */
+
+thead .legend {
+  width: 0.71em;
+  height: 0.71em;
+  margin-right: 1em;
+}
+
+#dashboard-table td:nth-child(1) {
+  min-width: 9em;
+}
+
+#dashboard-table td:nth-child(2) {
+  min-width: 10em;
+}
+
+#dashboard-table td{
+  cursor: pointer;
+}
+
+#dashboard-table td:last-child {
+  min-width: 25em;
+  padding: 0;
+  vertical-align: middle;
+}
+
+#dashboard-table td:last-child > .row {
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  padding: 0 1em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#dashboard-table td:last-child > .row > div {
+  margin-right: 1.3em;
+  padding: 0em 1em;
+  border-radius: 30px;
+}
+
+#dashboard-table th:last-child .resize-btn{
+  display: none;
+}
+
+/* Мобильная таблица */
+#mob-dashboard-table {
+  display: none;
+  width: 100%;
+}
+
+#mob-dashboard-table .tr {
+  padding-bottom: 1.25em;
+  margin-bottom: 1.5em;
+  border-bottom: 1px solid #cccccc;
+}
+
+#mob-dashboard-table .tr-head {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5em;
+}
+
+#mob-dashboard-table .row > div {
+  margin-right: 1em;
+  padding: 0em 1em;
+  border-radius: 30px;
+  font-size: 0.9em;
+}
+
+/* Цветные обертки-стикеры для сумм в таблице по состояниям */
+
+.data-sticker{
+	padding: 2px 10px;
+	text-align: center;
+	border: 1px solid transparent;
+	border-radius: 30px;
+	font-size: 0.875em;
+	background: #cccccc;
+}
+
+.sticker1{
+	border: 1px solid #2C6DA8;
+	color: #2C6DA8;
+	background: #EAF0F6;
+}
+
+.sticker2{
+	border: 1px solid #F69C00;
+	color: #F69C00;
+	background: #FEF5E5;
+}
+.sticker3{
+	border: 1px solid #6C4D77;
+	color: #6C4D77;
+	background: #F0EDF1;
+}
+.sticker4{
+	border: 1px solid #3F9726;
+	color: #3F9726;
+	background: #ECF5E9;
+}
+
+#chart1{
+	position: relative;
+	height: 32.3437vw;
+}
+
+/* Вторая секция с графикми */
+.info-graphic-1{
+	display: block; /**/
+	margin-top: 20px;
+}
+
+.orders-info{
+	z-index: 0;
+	position: absolute;
+	width: 200px;
+	height: 100px;
+	text-align: center;
+	font-size: 1.25em;
+	line-height: 1.55em;
+	color: #34495E;
+}
+
+.info-graphic-1 .col1{
+	margin-right: 20px;
+	background: #ffffff;
+}
+
+.info-graphic-1 .col2{
+	background: #ffffff;
+}
+
+.col-wrapper{
+	width: 100%;
+	height: 100%;
+	padding-bottom: 20px;
+	background: #ffffff;
+}
+
+.col-head{
+	display: flex;
+	align-items: flex-end;
+	justify-content: space-between;
+}
+
+.brands-btns{
+	display: flex;
+  align-items: center;
+	justify-content: flex-end;
+	margin-top: 20px;
+}
+
+.brands-btns .preorder-toggle{
+  display: none;
+}
+
+.brand-btn{
+	width: 60px;
+	height: 26px;
+	padding-left: 10px;
+	line-height: 28px;
+	border-radius: 37px;
+	text-align: left;
+	font-size: 0.875em;
+	color: #ffffff;
+	background: url('../img/close_white.svg') no-repeat right center;
+}
+
+.brand-btn:last-child{
+	margin-right: 0;
+}
+
+.status-1{
+	position: relative;
+	background: #34495E;
+}
+
+.status-2{
+	position: relative;
+	background: #F69C00;
+}
+
+.status-3{
+	position: relative;
+	background: #6C4D77;
+}
+
+.status-4{
+	position: relative;
+	background: #3F9726;
+}
+
+.status-1 .st-ic,
+.status-2 .st-ic,
+.status-3 .st-ic,
+.status-4 .st-ic{
+	position: absolute;
+	right: 10px;
+	top: 8px;
+	width: 11px;
+	height: 11px;
+	background: url('../img/close_white.svg') no-repeat center right;
+	background-size: contain;
+}
+
+/* График для рекламаций в работе */
+
+.section-body{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  padding: 1.25em;
+  background: #ffffff;
+}
+
+.section-body-1 {
+  padding: 20px;
+}
+
+.gauge{
+	width: 100%;
+	max-width: 355px;
+	margin: 0 auto;
+}
+
+.g-body{
+	position: relative;
+	width: 100%;
+	height: 0;
+	padding-bottom: 50%;
+	border-top-left-radius: 100% 200%;
+  border-top-right-radius: 100% 200%;
+	background: #F7AC93;
+	overflow: hidden;
+}
+
+.g-fill{
+	position: absolute;
+	top: 100%;
+	left: 0;
+	width: inherit;
+	height: 100%;
+	border-top: 1px solid #ffffff;
+	background: #cccccc;
+	transform-origin: center top;
+	transform: rotate(0.0turn);
+	transition: transform 2s ease-out;
+}
+
+.g-cover{
+	position: absolute;
+	top: 25%;
+	left: 50%;
+	width: 75%;
+	height: 150%;
+	border-radius: 50%;
+	transform: translateX(-50%);
+	background: #ffffff;
+}
+
+.speed-point{
+	z-index: 10;
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	border: 6px solid #34495E;
+	border-radius: 50%;
+	background: #ffffff;
+	transition: .8s linear;
+	transform: rotate(-0.25turn);
+  outline: none;
+}
+
+.speed-pointer{
+	z-index: -1;
+	position: absolute;
+	top: -100px;
+	left: -1px;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 0 10px 100px 10px;
+	border-color: transparent transparent #34495E transparent;
+  outline: none;
+}
+
+.recl-result{
+	margin: 0 auto;
+	width: 78%;
+	font-size: 1.325em;
+	line-height: 1.35em;
+	text-align: center;
+	letter-spacing: -1px;
+	color: #34495E;
+}
+
+.info-graphic-1 .full-width{
+  display: flex;
+  justify-content: center;
+	margin-bottom: 10px;
+}
+
+.info-graphic-1 .col-head .preorder-toggle,
+.info-graphic-2 .col-head .preorder-toggle {
+  padding-right: 20px;
+}
+
+.info-graphic-1 .section-head,
+.info-graphic-2 .section-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.info-graphic-2 .col1 .section-title{
+  width: 50%;
+}
+
+.info-graphic-2 .col1  .activate .head .title{
+  font-size: 0.875em;
+  color: #C6C6C6;
+}
+
+.info-graphic-2 .col1 .activate .head{
+  padding: 0.125em 0.325em;
+}
+
+.info-graphic-2 .col1 .activate .drop-down .item{
+  padding: 0.125em 0.325em;
+}
+
+.info-graphic-2 .section-body .preorder-toggle{
+  display: none;
+}
+
+#chart2{
+	margin-top: 20px;
+}
+
+#chart3{
+	margin-top: 3.225em;
+	margin-bottom: 20px;
+}
+
+.info-graphic-2{
+	display: block;
+  margin-top: 20px;
+}
+
+.info-graphic-2 .col2{
+	margin-right: 20px;
+}
+
+.chart-wrapper{
+	display: flex;
+}
+
+.info-graphic-2 .list{
+	margin-top: 1.25em;
+	margin-left: 2.5em;
+}
+
+.info-graphic-2 .item{
+	display: flex;
+	align-items: center;
+}
+
+.info-graphic-2 .item div:first-child{
+	width: 10px;
+	height: 10px;
+	border: 0;
+	border-radius: 3px;
+	margin-right: 10px;
+}
+
+.info-graphic-2 .item:first-child div:first-child{
+	background: #96B6D3;
+}
+
+.info-graphic-2 .item:nth-child(2) div:first-child{
+	background: #CCC8CA;
+}
+
+.info-graphic-2 .item:nth-child(3) div:first-child{
+	background: #F7AC93;
+}
+
+.info-graphic-2 .item:nth-child(4) div:first-child{
+	background: #B5A6BB;
+}
+
+.info-graphic-2 .item:nth-child(5) div:first-child{
+	background: #9FCB93;
+}
+
+.info-graphic-2 .item:last-child div:first-child{
+	background: #FBCD80;
+}
+
+.info-graphic-2 .item div:last-child{
+	font-size: 0.875em;
+	line-height: 2.6em;
+	color: #666666;
+}
+
+#procurement-select{
+	width: 8.925em;
+}
+
+#procurement-select .title{
+	color: #C6C6C6;
+}
+
+/* Карусель с баннерами */
+
+#banners .left-btn {
+  top: 10px;
+  left: 10px;
+  width: 3em;
+  opacity: 1;
+  background: url(../img/slider_left_btn.svg) no-repeat center!important;
+  background-size: contain;
+}
+
+#banners .right-btn {
+  top: 10px;
+  right: 10px;
+  width: 3em;
+  opacity: 1;
+  background: url(../img/slider_right_btn.svg) no-repeat center!important;
+  background-size: contain;
+}
+
+#banners .carousel-nav { /* навигация не является обязательной, это пример стилей для навигации точками */
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding-left: 5.5em;
+  bottom: 1em;
+  /* width: 100%; */
+}
+
+#banners .carousel-nav > div:not(.carousel-item) {
+  width: 0.725em;
+  height: 0.725em;
+  background-color: #FFFFFF;
+  border: 1px solid #53606F;
+  border-radius: 50%;
+  margin-right: 1em;
+  opacity: 0.6;
+}
+
+#banners .carousel-nav > div.active {
+  opacity: 1;
+}

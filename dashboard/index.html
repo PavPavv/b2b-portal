@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../img/top_sports_logo_black_short_transparency.png">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ТОП СПОРТС - Рабочий стол</title>
+    <meta name="keywords" content="ТОП СПОРТС">
+    <meta name="description" content="ТОП СПОРТС">
+    <script src="../js/check_auth.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/fonts.css">
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <link rel="stylesheet" type="text/css" href="../css/media_main.css">
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <link rel="stylesheet" type="text/css" href="media_index.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+  </head>
+
+  <body data-website="ts_b2b" data-cart="true">
+
+
+
+    <div id="main">
+			<div id="dashboard" class="container">
+				<div id="main-header" class="row">
+					<div class="title h0">Рабочий стол дилера</div>
+				</div>
+				<div class="dashboard-wrap">
+          <!-- Левая основная колонка -->
+          <main>
+            <!-- Взаиморасчеты -->
+            <section class="settle">
+              <div class="settle-title">Взаиморасчеты</div>
+              <div class="settle-blocks">
+                <div class="settle-block">
+                  <div class="lines">
+                    <div class="line">
+                      <div class="line-ic"></div>
+                      <div class="line-title">Оплата до отгрузки</div>
+                    </div>
+                    <div class="line">
+                      <div class="line-status">
+                        <div class="">Активных заказов: 6</div>
+                        <div class=""></div>
+                      </div>
+                    </div>
+                    <div class="line line-money"><span>Итого:</span><div class="money">1 202 987 руб.</div></div>
+                  </div>
+                </div>
+                <div class="settle-block">
+                  <div class="attention">Просрочено!</div>
+                  <div class="lines">
+                    <div class="line">
+                      <div class="line-ic"></div>
+                      <div class="line-title">Оплата за отгруженный товар</div>
+                    </div>
+                    <div class="line">
+                      <div class="line-status">
+                        <div class="">Активных заказов: 1</div>
+                        <div class="">Оплата до: 20.11.20</div>
+                      </div>
+                    </div>
+                    <div class="line line-money"><span>Итого:</span> <div class="money">99 000 руб.</div></div>
+                  </div>
+                </div>
+                <div class="settle-block">
+                  <div class="lines">
+                    <div class="line">
+                      <div class="line-ic"></div>
+                      <div class="line-title">Переплаты в заказах</div>
+                    </div>
+                    <div class="line">
+                      <div class="line-status">
+                        <div class="">Активных заказов: &ndash;</div>
+                        <div class=""></div>
+                      </div>
+                    </div>
+                    <div class="line line-money"><span>Итого:</span><div class="money">&ndash; руб.</div></div>
+                  </div>
+                </div>
+                <div class="settle-block">
+                  <div class="lines">
+                    <div class="line">
+                      <div class="line-ic"></div>
+                      <div class="line-title">Депозиты</div>
+                    </div>
+                    <div class="line line4">Неснижаемый остаток: 50 000 руб.</div>
+                    <div class="line line-money"><span>Итого:</span><div class="money">278 500 руб.</div></div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <!-- Карусель с баннерами -->
+            <section class="banners-carousel" id="banners" >
+              <div class="carousel" data-type="product">
+                <div class="carousel-gallery-wrap">
+                  <div class="left-btn"></div>
+                  <div class="right-btn"></div>
+                  <div class="carousel-gallery" id="test">
+                    <div class="carousel-item">
+                      <img src="../img/content/@@src@@" data-src="" alt="баннер акции">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <!-- Секция "Заказы в работе"-->
+            <section class="infoblock switch">
+              <div class="section-head col-wrapper row" onclick="switchContent(event)">
+                <div class="title h1">Заказы в работе</div>
+                <div class="graphic-btns">
+                  <!-- тоггл "Только предзаказы" -->
+                  <div class="preorder-toggle">
+                    <div class="toggle-name">Только предзаказы</div>
+                    <div class="toggle" id="table-toggle" onclick="toggle(event)">
+                      <div class="toggle-in"></div>
+                    </div>
+                  </div>
+                  <div class="table-btns">
+                    <div class="table-btn status1" id="status1">
+                      Ожидается <div class="st-ic"></div>
+                    </div>
+                    <div class="table-btn status2" id="status2">
+                      В наличии <div class="st-ic"></div>
+                    </div>
+                    <div class="table-btn status3" id="status3">
+                      Собран <div class="st-ic"></div>
+                    </div>
+                    <div class="table-btn status4" id="status4">
+                      Отгружен <div class="st-ic"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="open white icon switch-icon"></div>
+              </div>
+              <div class="info-wrap switch-cont row">
+                <div class="col1">
+                  <div id="chart1">
+                    <div class="orders-info"></div>
+                    <canvas id="orders-chart"></canvas>
+                  </div>
+                  <div class="full-width">
+                    <a href="#">Перейти к заказам</a>
+                  </div>
+                  <div class="graphic-btns1">
+                    <!-- тоггл "Только предзаказы" -->
+                    <div class="preorder-toggle">
+                      <div class="toggle-name">Только предзаказы</div>
+                      <div class="toggle" id="table-toggle-mob" onclick="toggle(event)">
+                        <div class="toggle-in"></div>
+                      </div>
+                    </div>
+                    <div class="table-btns" id="table-btns-mob">
+                      <div class="table-btn status1" id="status1-mob">
+                        Ожидается <div class="st-ic"></div></div>
+                      <div class="table-btn status2" id="status2-mob">
+                        В наличии <div class="st-ic"></div></div>
+                      <div class="table-btn status3" id="status3-mob">
+                        Собран <div class="st-ic"></div></div>
+                      <div class="table-btn status4" id="status4-mob">
+                        Отгружен <div class="st-ic"></div></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col2">
+                  <!-- Таблица "Заказы в работе" на Сашином новом шаблоне из orders-->
+                  <div id="dashboard-table" class="table-wrap active">
+                    <div class="table">
+                      <table class="head">
+                      </table>
+                      <table>
+                        <tbody>
+                          <tr onclick=showOrder(event,#id#)>
+                            <td>#order_number#</td>
+                            <td>#order_event#</td>
+                            <td>
+                              <div class="row">
+                                <div class="vputi c10 #display1#">#sum1#</div>
+                                <div class="vnali c10 #display2#">#sum2#</div>
+                                <div class="sobrn c10 #display3#">#sum3#</div>
+                                <div class="otgrz c10 #display4#">#sum4#</div>
+                                <div class="nedop c10 #display5#">#sum5#</div>
+                              </div>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                  <div id="mob-dashboard-table">
+                    <div class="tr">
+                      <div class="tr-head">
+                        <div class="td">#order_number#</div>
+                        <div class="td">#order_event#</div>
+                      </div>
+                      <div class="row">
+                        <div class="vputi c10 #display1#">#sum1#</div>
+                        <div class="vnali c10 #display2#">#sum2#</div>
+                        <div class="sobrn c10 #display3#">#sum3#</div>
+                        <div class="otgrz c10 #display4#">#sum4#</div>
+                        <div class="nedop c10 #display5#">#sum5#</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <!-- Секция "Рекламация в работе" и "График поставок" -->
+            <section class="info-graphic-1">
+              <div class="info-wrap">
+                <div class="col1" >
+                  <div class="col-wrapper center-col switch" >
+                    <!-- Заголовок секции -->
+                    <div class="section-head" onclick="switchContent(event)">
+                      <div class="title h1">Рекламации в работе</div>
+                      <div class="open white icon switch-icon"></div>
+                    </div>
+                    <div class="section-body switch-cont">
+                      <!-- Диаграмма рекламаций -->
+                      <div class="speed-chart">
+                        <div class="gauge">
+                          <div class="g-body">
+                            <div class="g-fill"></div>
+                            <div class="g-cover"></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="speed-point">
+                        <div class="speed-pointer"></div>
+                      </div>
+                      <!-- Текст результата рекламаций -->
+                      <div class="recl-result">
+                        тест тест тест
+                      </div>
+                      <!-- Копка перейти к рекламациям -->
+                      <div class="full-width">
+                        <a href="/reclamations">Перейти к рекламациям</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col2 switch" >
+                  <div class="col-wrapper">
+                    <div class="col-head">
+                      <!-- Заголовок секции -->
+                      <div class="section-head" onclick="switchContent(event)">
+                        <div class="title h1">График поставок</div>
+                        <div class="open white icon switch-icon"></div>
+                      </div>
+                      <!-- тоггл "Только предзаказы" -->
+                      <div class="preorder-toggle">
+                        <div class="toggle-name">Только предзаказы</div>
+                        <div class="toggle" onclick="toggle(event)">
+                          <div class="toggle-in"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="section-body-1 switch-cont">
+                      <div class="brands-btns">
+                        <div class="table-btns">
+                          <div class="brand-btn status-1">
+                            BCA <div class="st-ic"></div>
+                          </div>
+                          <div class="brand-btn status-2">
+                            509 <div class="st-ic"></div>
+                          </div>
+                          <div class="brand-btn status-4">
+                            FXR <div class="st-ic"></div>
+                          </div>
+                        </div>
+                        <!-- тоггл "Только предзаказы" -->
+                        <div class="preorder-toggle">
+                          <div class="toggle-name">Только предзаказы</div>
+                          <div class="toggle" onclick="toggle(event)">
+                            <div class="toggle-in"></div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- График поставок -->
+                      <div id="chart2">
+                        <canvas id="delivery-chart"></canvas>
+                      </div>
+                      <div class="txt">Оплатить товар необходимо в течение 5 рабочих дней, с момента получения уведомления о поступлении на склад.</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="info-graphic-2">
+              <div class="info-wrap">
+                <div class="col2 ">
+                  <div class="col-wrapper center-col switch" >
+                    <div class="col-head">
+                      <!-- Заголовок секции -->
+                      <div class="section-head" onclick="switchContent(event)">
+                        <div class="title h1">Ежегодная динамика товарооборота</div>
+                        <div class="open white icon switch-icon"></div>
+                      </div>
+                      <!-- тоггл "Только предзаказы" -->
+                      <div class="preorder-toggle">
+                        <div class="toggle-name">Только предзаказы</div>
+                        <div class="toggle" id="bar-chart-tgl-1" onclick="toggle(event)">
+                          <div class="toggle-in"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="section-body switch-cont">
+                      <!-- тоггл "Только предзаказы" -->
+                      <div class="preorder-toggle">
+                        <div class="toggle-name">Только предзаказы</div>
+                        <div class="toggle" id="bar-chart-tgl-2" onclick="toggle(event)">
+                          <div class="toggle-in"></div>
+                        </div>
+                      </div>
+                      <div id="chart3">
+                        <canvas id="bar-chart"></canvas>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col1">
+                  <div class="col-wrapper center-col switch" >
+                    <!-- Заголовок секции -->
+                    <div class="section-head" onclick="switchContent(event)">
+                      <div class="title h1">Доля закупок по производителям</div>
+                      <div class="open white icon switch-icon"></div>
+                    </div>
+                    <div class="chart-wrapper switch-cont">
+                      <div id="chart4">
+                        <canvas id="procurement-chart"></canvas>
+                      </div>
+                      <legend>
+                        <div id="procurement-select" class="activate select">
+                          <div class="head row">
+                            <div class="title">Выберите год</div>
+                            <svg class="triangle" width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M4 5L-2.99379e-07 -2.9635e-07L8 2.08053e-07L4 5Z" fill="#34495E"></path>
+                            </svg>
+                          </div>
+                          <div class="drop-down" id="donut-select">
+                            <div class="item" data-value="1">#year#</div>
+                          </div>
+                        </div>
+                        <div class="list">
+                          <div class="item">
+                            <div></div>
+                            <div>BCA</div>
+                          </div>
+                          <div class="item">
+                            <div></div>
+                            <div>Jethwear</div>
+                          </div>
+                          <div class="item">
+                            <div></div>
+                            <div>509</div>
+                          </div>
+                          <div class="item">
+                            <div></div>
+                            <div>FXR</div>
+                          </div>
+                          <div class="item">
+                            <div></div>
+                            <div>Abom</div>
+                          </div>
+                          <div class="item">
+                            <div></div>
+                            <div>Ogio</div>
+                          </div>
+                        </div>
+                      </legend>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </main>
+          <!-- Правая колонка с баннерами -->
+          <aside>
+            <!-- статические баннеры, скрываются на 1360px, вместо них адпативный сладер после секции "Взаиморасчеты" -->
+            <div class="banners" id="dashboard-banners">
+              <div class="banner">
+                <a href="">
+                  <img src="../img/content/@@src@@" alt="banner">
+                </a>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+		</div>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/test.js"></script>
+    <script src="../js/table.js"></script>
+    <script src="../js/carousel.js"></script>
+    <script src="index.js"></script>
+
+    <!-- Инициализации подключений -->
+    <script>
+
+    //  инициализации селекта для секции
+    initDropDown('#procurement-select');
+    </script>
+  </body>
+</html>

@@ -1,0 +1,187 @@
+.main-title .title-row .title{
+  margin-bottom: 0.6em;
+}
+
+.inform-temp >:first-child {
+  margin-right: 5em;
+}
+
+.text-temp > span {
+  margin-right: 1em;
+}
+
+.table-wrap {
+  max-height: 40vh;
+}
+
+.icons-temp #up-btn {
+  position: static;
+  display: block;
+}
+
+.icons-temp #up-btn,
+.icons-temp > svg,
+.icons-temp > div {
+  margin-right: 1em;
+  font-size: 2em;
+  width: 1em;
+  height: 1em;
+}
+
+.icons-temp > div > div {
+  width: 1em;
+  height: 1em;
+}
+
+.not-found.icon {
+  width: 1.46em;
+  height: 1em;
+}
+
+.check-temp > div {
+  margin-right: 1em;
+  font-size: 1em;
+  width: 1em;
+  height: 1em;
+}
+
+.check-temp > div > div {
+  width: 1em;
+  height: 1em;
+}
+
+.btns-temp > div {
+  margin-right: 1em;
+}
+
+.search-temp {
+  width: 230px;
+}
+
+.drop-down-temp {
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.drop-down-temp > div {
+ margin-right: 2em;
+}
+
+/* Стили для таблицы */
+
+#contra-table td{
+  cursor: default;
+}
+
+#contra-table td:nth-child(1) {
+  min-width: 6em;
+  text-align: center;
+}
+
+#contra-table td:nth-child(2) {
+  min-width: 12em;
+}
+
+#contra-table td:nth-child(3) {
+  min-width: 10em;
+}
+
+#contra-table td:nth-child(4) {
+  min-width: 10em;
+}
+
+#contra-table td:nth-child(5) {
+  min-width: 4em;
+  text-align: center;
+}
+
+#contra-table td:nth-child(6) {
+  min-width: 28em;
+}
+
+#contra-table td:nth-child(7) {
+  min-width: 9em;
+}
+
+#contra-table td:nth-child(8) {
+  min-width: 25em;
+}
+
+#contra-table td .row{
+  align-items: center;
+}
+
+/* Стили для tablet таблицы */
+
+#contras-table{
+  display: none;
+}
+
+/* Модальное окно "Добавление контрагента" */
+
+/* Стили для всплывающей формы (образец из раздела Контрагенты): */
+
+#contra-modal form.post > .title {
+  font-size: 0.857em;
+  margin-bottom: 2em;
+}
+
+#contra-modal form.post > .row > .row {
+  align-items: center;
+}
+
+#contra-modal form.post > .row .form-wrap input {
+  width: 16.5em;
+}
+
+#contra-modal form.post > .row .form-wrap:last-child input {
+  width: 8em;
+}
+
+#inn-loader {
+  width: 2.4em;
+  height: 2.4em;
+  margin-right: 2em;
+  visibility: hidden;
+}
+
+/* Вынужденное переопределение главных стилей для конктретной страницы */
+
+#contras .main-title .row{
+  align-items: flex-start;
+}
+
+#contras .main-title .title-row .title{
+  margin-bottom: 0;
+}
+
+#contras .info-wrap{
+  padding: 1.25em;
+  margin: 0;
+}
+
+#contras .info-wrap > * {
+  margin-bottom: 1.25em;
+}
+
+#contras .info-wrap > .row{
+  align-items: center;
+  margin-bottom: 0;
+}
+
+#contras .info-wrap div{
+  font-size: 14px;
+  color: #34495E;
+}
+
+#contras .info-wrap span{
+  color: #666666;
+}
+
+#contras-table .section-head .row{
+  align-items: center;
+}
+
+#contras-table .section-head .section-title {
+  font-size: 1em;
+}

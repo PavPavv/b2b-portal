@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>ТОП СПОРТС - Контрагенты</title>
+  <meta name="keywords" content="ТОП СПОРТС">
+  <meta name="description" content="ТОП СПОРТС">
+  <link rel="icon" href="../img/top_sports_logo_black_short_transparency.png">
+  <script src="../js/check_auth.js"></script>
+  <link rel="stylesheet" type="text/css" href="../css/fonts.css">
+  <link rel="stylesheet" type="text/css" href="../css/main.css">
+  <link rel="stylesheet" type="text/css" href="../css/media_main.css">
+  <link rel="stylesheet" type="text/css" href="index.css">
+  <link rel="stylesheet" type="text/css" href="media_index.css">
+</head>
+<body data-website="ts_b2b" data-cart="true">
+
+  <div id="main">
+    <div id="contras" class="container">
+      <div id="main-header" class="row">
+        <div class="title h0">Контрагенты</div>
+        <div class="add icon" tooltip="Добавить" onclick="openPopUp('#contra-modal')"></div>
+      </div>
+      <div class="basic btn" onclick="openPopUp('#contra-modal')">Добавить</div>
+      <div id="contra-table" class="table-wrap active">
+
+      <!-- Прелоадер страницы -->
+      <div id="page-loader" class="loader">
+        <div class="loader icon"></div>
+        <div class="text"></div>
+      </div>
+
+      <div id="contras-table" class="tablet">
+        <!-- Секция контрагента-->
+        <section class="infoblock">
+          <div class="section-head">
+            <div class="title">#contr#</div>
+            <div class="row">
+              <div class="toggle dark" onclick="toggle(event)">
+                <div class="toggle-in"></div>
+              </div>
+            </div>
+          </div>
+          <div class="info-wrap col">
+            <div>ИНН/КПП: <span>#contr#</span></div>
+            <div>Система налогооблажения: <span>#system#</span></div>
+            <div>Дата заведения: <span>#date#</span></div>
+            <div>Юридический адрес: <span>#address#</span></div>
+            <div class="row docs">
+              <div class="download icon"></div><a href="#">#doc_title#</a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- Адаптивная таблица -->
+    <div id="contras-table-mob" class="table-adaptive">
+      <div class="infoblock">
+        <div class="head">
+          <div class="title">#contr#</div>
+          <div class="toggle dark #accessType#" onclick="toggle(event)">
+            <div class="toggle-in"></div>
+          </div>
+        </div>
+        <div class="info content">
+          <div class="title">ИНН/КПП: <span class="text">#inn#</span></div>
+          <div class="title">Система налогообложения: <span class="text">#system#</span></div>
+          <div class="title">Дата заведения: <span class="text">#date#</span></div>
+          <div class="title">Юридический адрес: <span class="text">#address#</span></div>
+          <div class="docs row #status-ic#"><div class="mark icon"></div><a href="url" target="_blank">#title#</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Модальное окно "Добавление контрагента" -->
+  <div id="contra-modal" class="pop-up-container">
+    <div class="pop-up">
+      <div class="pop-up-title row">
+        <div class="title h1">Добавление контрагента</div>
+        <div class="close icon"></div>
+      </div>
+      <div class="pop-up-body">
+        <form class="post">
+          <div class="title">Добавьте ИНН, данные юридического лица загрузятся автоматически</div>
+          <div class="row row-wrap">
+            <div class="row">
+              <div class="form-wrap" required>
+                <div class="title">ИНН*</div>
+                <input type="text" value="" name="" placeholder="" maxlength="12" onkeypress="return onlyNumb(event)">
+                <div class="err">Поле не заполнено</div>
+              </div>
+              <div id="inn-loader" class="loader icon"></div>
+            </div>
+            <div class="form-wrap">
+              <div class="title">КПП</div>
+              <input type="text" value="" name="" placeholder="" disabled>
+              <div class="err">Поле не заполнено</div>
+            </div>
+          </div>
+          <div class="form-wrap">
+            <div class="title">Название</div>
+            <input type="text" value="" name="" placeholder="" disabled>
+            <div class="err">Поле не заполнено</div>
+          </div>
+          <div class="form-wrap" required>
+            <div class="title">Юридический адрес*</div>
+            <textarea name="" maxlength="" autocomplete="off" placeholder="" disabled></textarea>
+            <div class="err">Поле не заполнено</div>
+          </div>
+          <div class="form-wrap" required>
+            <div class="title">Система налогообложения*</div>
+            <div class="activate select" value="" name="" disabled>
+              <div class="head row">
+                <div class="title">Закупки</div>
+                <div class="triangle icon"></div>
+              </div>
+              <div class="drop-down">
+                <div class="item" data-value="Общая">Общая</div>
+                <div class="item" data-value="УСН">Урощенная</div>
+                <div class="item" data-value="УСН">Прочая</div>
+              </div>
+            </div>
+            <div class="err">Поле не заполнено</div>
+          </div>
+          <div class="btns-wrap">
+            <input class="btn sub-act" type="submit" value="Отправить" disabled>
+          </div>
+        </form>
+      </div>
+      <div class="loader">
+        <div class="loader icon"></div>
+        <div class="text">Пожалуйста, подождите</div>
+      </div>
+    </div>
+  </div>
+
+    <script src ="../js/main.js"></script>
+    <script src="../js/table.js"></script>
+    <script src="../js/test.js"></script>
+    <script src ="index.js"></script>
+  </body>
+</html>

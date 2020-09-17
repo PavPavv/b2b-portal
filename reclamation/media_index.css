@@ -1,0 +1,175 @@
+@media (max-width: 1600px) {
+  .image-item {
+    width: 140px;
+  }
+
+  .progress-wrap {
+    margin-left: 50px;
+  }
+
+  .complaint-photo{
+    width: 100%;
+    margin-top: 2vw;
+  }
+
+}
+
+@media (max-width: 1200px) {
+  .refund-info {
+    display: none;
+  }
+}
+
+@media (max-width: 1080px) {
+  .chat-wrap {
+    display: none;
+  }
+
+  .chat-block .chat-message .you  {
+    margin: 10px 0;
+  }
+
+  .mob-chat {
+    display: block;
+  }
+
+  .container1 {
+    width: 100%;
+  }
+}
+
+@media (max-width: 960px) {
+  .line{
+    width: 12.45vw;
+  }
+}
+
+@media (max-width: 767px) {
+
+  .container1 {
+    flex-direction: column;
+  }
+
+  .container .complaint {
+    padding: 0!important;
+    width: 100%!important;
+  }
+
+  .container1 .complaint:last-child {
+    margin-top: 20px;
+  }
+
+  .complaint .title {
+    margin-bottom: 10px;
+  }
+
+  .complaint-info {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .container1:last-child .complaint:first-child {
+    order: 2;
+  }
+
+  .container1:last-child .complaint:last-child {
+    order: 1;
+  }
+
+  .visual {
+    flex-direction: row;
+  }
+
+  .visual img {
+    max-width: 250px;
+  }
+
+}
+
+@media (max-width: 660px) {
+
+  .progress-wrap {
+    margin-left: 105px;
+  }
+
+  .head-pan {
+    flex-direction: column;
+  }
+
+  .refund-list {
+    width: 100%;
+    margin: 0.5em 0 2em 0;
+  }
+
+  #refund-btn {
+    width: 100%;
+  }
+
+  .complaint-descr {
+    width: 100%;
+  }
+
+  .visual img {
+    max-width: 200px;
+  }
+
+}
+
+@media (max-width:560px ) {
+
+  .progress-wrap {
+    margin-left: 0;
+    margin-top: 0;
+  }
+
+  .progress-title {
+    display: none;
+  }
+
+  .visual {
+    flex-direction: column;
+  }
+
+  .visual img {
+    max-width: 220px;
+  }
+
+  .point {
+    width: 2.3em;
+    height: 2.3em;
+  }
+}
+
+@media (max-width: 481px) {
+
+  .image-upload {
+    height: 120px;
+  }
+
+  .image-item {
+    width: 120px;
+    height: 120px;
+  }
+
+  .chat-wrap {
+    z-index: 400;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 0;
+    width: 100%;
+    min-width: 100% ;
+  }
+
+  .chat-body {
+    height: calc(100vh - 110px);
+  }
+
+}
+
+@media (max-width: 390px) {
+  .point {
+    width: 1.8em;
+    height: 1.8em;
+  }
+}

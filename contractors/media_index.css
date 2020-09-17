@@ -1,0 +1,35 @@
+/* tablet */
+@media (max-width: 767px) {
+
+  .open.icon {
+    display: block;
+  }
+
+  /* #contras-table.tablet{
+    display: block;
+  } */
+
+  #contras-table-mob {
+    display: block;
+  }
+
+}
+
+/* mobile */
+@media (max-width: 499px) {
+
+  #contras .info-wrap span{
+    display: block;
+    width: 80%;
+  }
+
+  #contra-modal .post .row.row-wrap {
+    display: block;
+  }
+
+  #contra-modal form.post > .row .form-wrap input,
+  #contra-modal .post .activate.select {
+    width: 100%;
+  }
+
+}

@@ -1,0 +1,36 @@
+#orderslist td:nth-child(1) {
+  min-width: 5em;
+}
+
+#orderslist td:nth-child(2) {
+  min-width: 10em;
+}
+
+#orderslist td:nth-child(3) {
+  min-width: 10em;
+}
+
+#orderslist td:nth-child(4) {
+  min-width: 10em;
+}
+
+#orderslist td:nth-child(5) {
+  min-width: 10em;
+}
+
+#orderslist td:nth-child(6) {
+  min-width: 10em;
+  text-align: right;
+}
+
+#orderslist td:nth-child(7) {
+  min-width: 10em;
+  text-align: right;
+}
+
+#orderslist td:nth-child(8) {
+  min-width: 25em;
+  padding-top: 0.75em;
+  padding-bottom: 0;
+  line-height: 0;
+}

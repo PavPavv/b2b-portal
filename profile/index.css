@@ -1,0 +1,56 @@
+#profile-page .card{
+  width: 46.4125em;
+  padding: 1.42em 2.14em;
+  font-size: 14px;
+  background: #F8F8F8;
+  box-shadow: 0px 4px 15px rgba(52, 73, 94, 0.1), 0px 2px 10px rgba(52, 73, 94, 0.06), 0px 0px 5px rgba(52, 73, 94, 0.05);
+}
+
+.card .head{
+  margin-bottom: 1.3em;
+}
+
+.card .head{
+  justify-content: space-between!important;
+}
+
+.card .row{
+  justify-content: space-between;
+}
+
+#profile-page .card .block .line:not(:last-child){
+  margin-bottom: 1.1em;
+}
+
+#profile-page .card .block .line{
+  color: #34495E;
+}
+
+#profile-page .card .block .line span{
+color: #666666;
+}
+
+#edit-profile .text.light{
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.col .modal-col{
+  width: 50%;
+}
+
+#edit-profile .modal-col > .col{
+  width: 91%;
+}
+
+#edit-profile .modal-col > .col {
+  width: 91%;
+}
+
+#edit-profile .form-col2 .title{
+  margin-bottom: 0.45em;
+}
+
+#profile-birth{
+  width: 9.1428em;
+}

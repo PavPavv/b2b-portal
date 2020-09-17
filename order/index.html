@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>ТОП СПОРТС - Заказ</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="ТОП СПОРТС">
+    <meta name="description" content="ТОП СПОРТС">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../js/check_auth.js"></script>
+    <link rel="icon" href="../img/top_sports_logo_black_short_transparency.png">
+    <link rel="stylesheet" type="text/css" href="../css/fonts.css">
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <link rel="stylesheet" type="text/css" href="../css/media_main.css">
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <!-- <link rel="stylesheet" type="text/css" href="media_index.css"> -->
+  </head>
+
+  <body data-website="ts_b2b" data-cart="true">
+
+    <div id="main">
+      <div class="container">
+        <div id="order-info" class="template">
+          <div id="main-header" class="row">
+            <div class="title h0">Заказ #order_number# от #order_date#
+              <span class="dot">, </span>
+              <span class="name">#contr_name#</span>
+            </div>
+          </div>
+          <div class="up row">
+            <div class="info row">
+              <div class="side">
+                <div class="title h3">Детали заказа</div>
+                <div class="row">
+                  <div class="title">Тип заказа:</div>
+                  <div class="text">#order_type#</div>
+                </div>
+                <div class="row">
+                  <div class="title">Заказчик:</div>
+                  <div class="text">#user_fio#</div>
+                </div>
+                <div class="row">
+                  <div class="title">Статус заказа:</div>
+                  <div class="text">#order_status#</div>
+                </div>
+              </div>
+              <div class="side">
+                <div class="title h3">Параметры доставки</div>
+                <div class="row">
+                  <div class="title">Способ доставки:</div>
+                  <div class="text">#delivery_type#</div>
+                </div>
+                <div class="row">
+                  <div class="title">Отгрузочные документы:</div>
+                  <div class="text">#shipping_docs#</div>
+                </div>
+                <div class="row">
+                  <div class="title">Адрес доставки:</div>
+                  <div class="text">#order_address#</div>
+                </div>
+              </div>
+            </div>
+            <div class="details col">
+              <div class="btns">
+                <div class="btn" onclick="openPopUp('#shipment')">Отгрузки</div>
+                <div class="btn" onclick="openPopUp('#payment')">Платежи</div>
+              </div>
+              <a href="" class="row">
+                <div class="download icon"></div>
+                <div>Скачать счет</div>
+              </a>
+            </div>
+          </div>
+          <div class="down row #isDisplay#">
+            <div class="comment row #isComment#">
+              <div class="title">Комментарий:</div>
+              <div class="text">#comment#</div>
+            </div>
+            <div class="btns #isSpecial#">
+              <div class="btn">Отменить заказ</div>
+              <div class="btn sub-act">Подтвердить заказ</div>
+            </div>
+          </div>
+
+        </div>
+        <div class="tabs row">
+          <div class="tab nomen c30 checked">Итого</div>
+          <div class="tab vputi c30">В пути</div>
+          <div class="tab vnali c30">В наличии</div>
+          <div class="tab sobrn c30">Собран</div>
+          <div class="tab otgrz c30">Отгружен</div>
+          <div class="tab nedop c30">Непоставка</div>
+          <div class="tab reclm c30">Рекламации</div>
+        </div>
+        <div id="nomen" class="table-wrap active"></div>
+        <div id="vputi" class="table-wrap"></div>
+        <div id="vnali" class="table-wrap"></div>
+        <div id="sobrn" class="table-wrap"></div>
+        <div id="otgrz" class="table-wrap"></div>
+        <div id="nedop" class="table-wrap"></div>
+        <div id="reclm" class="table-wrap"></div>
+      </div>
+    </div>
+
+    <div id="make-reclm" class="pop-up-container">
+      <div class="pop-up">
+        <div class="pop-up-title row">
+          <div class="title h1">Оформление рекламации</div>
+          <div class="close icon"></div>
+        </div>
+        <div class="pop-up-body">
+          <div class="order-info">
+            <div>К заказу <a href="../order/?order_id=#id#" target="_blank">№#order_number#</a> от #order_date#</div>
+            <div>#titl#</div>
+            <div class="text midlight">Артикул #artc#</div>
+          </div>
+          <form id="reclm-form" class="post">
+            <input type="hidden" name="recl[order_id]" value="#id#">
+            <input type="hidden" name="recl[code_1c]" value="#object_id#">
+            <input type="hidden" name="recl[code_str]" value="#cods#">
+            <input type="hidden" name="recl[articul]" value="#artc#">
+            <input type="hidden" name="recl[item_code_1c]" value="#harid#">
+            <input type="hidden" name="recl[doc_id]" value="#naklid#">
+            <input type="hidden" name="recl[cnt]" value="#???#">
+            <input type="hidden" name="recl[nakl]" value="#nakl#">
+            <input type="hidden" name="recl[nakl_date]" value="#dotg#">
+            <input type="hidden" name="recl[item_title]" value="#titl#">
+            <input type="hidden" name="recl[max_otgrz]" value="#kolv#">
+            <div class="form-cols">
+              <div class="form-col2">
+                <div class="form-wrap" required>
+                  <div class="title">Категория обращения*</div>
+                  <div class="option row">
+                    <input type="radio" value="Пересорт" name="recl[group_type]">
+                    <div class="radio icon"></div>
+                    <div>Пересорт</div>
+                  </div>
+                  <div class="option row">
+                    <input type="radio" value="Недосдача" name="recl[group_type]">
+                    <div class="radio icon"></div>
+                    <div>Недосдача</div>
+                  </div>
+                  <div class="option row">
+                    <input type="radio" value="Некомплектность" name="recl[group_type]">
+                    <div class="radio icon"></div>
+                    <div>Некомплектность</div>
+                  </div>
+                  <div class="option row">
+                    <input type="radio" value="Производственный брак" name="recl[group_type]">
+                    <div class="radio icon"></div>
+                    <div>Производственный брак</div>
+                  </div>
+                  <div class="option row">
+                    <input type="radio" value="Несоответствие описанию" name="recl[group_type]">
+                    <div class="radio icon"></div>
+                    <div>Несоответствие описанию</div>
+                  </div>
+                  <div class="option row">
+                    <input type="radio" value="Не могу определить" name="recl[group_type]">
+                    <div class="radio icon"></div>
+                    <div>Не могу определить</div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-col2">
+                <div class="form-wrap">
+                  <div class="title">Количество бракованных изделий</div>
+                  <div class="qty qty-box row #qtyStyle#">
+                    <div class="btn minus" data-tooltip="Уменьшить" onclick="changeQty(event, #kolv#, 1)"></div>
+                    <input class="choiced-qty" #qtyStyle# name="recl[amount]" type="text" value="1" data-value="1" autocomplete="off" onchange="changeQty(event, #kolv#, 1)" onblur="onBlurInput(this)" onfocus="onFocusInput(this)" onkeypress="return onlyNumb(event)">
+                    <div class="btn plus" data-tooltip="Добавить" onclick="changeQty(event, #kolv#, 1)"></div>
+                  </div>
+                </div>
+                <div class="img-wrap">
+                  <img src="#image#">
+                </div>
+              </div>
+            </div>
+            <div class="form-wrap" required>
+              <div class="title">Комментарий*</div>
+              <textarea name="recl[comment]" maxlength="250" autocomplete="off" placeholder="Введите текст" oninput="textareaCounter(this)"></textarea>
+              <div class="text-counter" data-count="recl[comment]">Знаков осталось: <span>250</span></div>
+            </div>
+            <div class="btns-wrap">
+              <input class="btn sub-act" type="submit" value="Отправить" disabled>
+            </div>
+          </form>
+        </div>
+        <div class="loader">
+          <div class="loader icon"></div>
+          <div class="text">Пожалуйста, подождите</div>
+        </div>
+      </div>
+    </div>
+
+    <div id="shipment" class="pop-up-container">
+      <div class="pop-up">
+        <div class="pop-up-title row">
+          <div class="title h1">Отгрузки</div>
+          <div class="close icon"></div>
+        </div>
+        <div class="pop-up-body">
+          <table>
+            <thead>
+              <tr>
+                <th class="title">Документ</th>
+                <th class="title">Количество</th>
+                <th class="title">Сумма</th>
+                <th class="title">Трекинг</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <a class="row" href="id=#id#">
+                    <div class="download icon"></div>
+                    <div>Накладная #number# от #date#</div>
+                  </a>
+                </td>
+                <td>
+                  <div class="row">
+                    <a href="">
+                      <div class="barcode icon" data-tooltip="Скачать штрихкоды"></div>
+                    </a>
+                    <div>#kolv#</div>
+                  </div>
+                </td>
+                <td>#summ#</td>
+                <td><a href="#id#" target="_blank">#trac#</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="loader">
+          <div class="loader icon"></div>
+          <div class="text">Пожалуйста, подождите</div>
+        </div>
+      </div>
+    </div>
+
+    <div id="payment" class="pop-up-container">
+      <div class="pop-up">
+        <div class="pop-up-title row">
+          <div class="title h1">Платежи</div>
+          <div class="close icon"></div>
+        </div>
+        <div class="pop-up-body row">
+          <div class="row">
+            <div>
+              <div class="title">Тип платежа</div>
+              <div>График платежей</div>
+              <div>Аванс</div>
+              <div>Поступление</div>
+              <div>Переплата</div>
+            </div>
+            <div class="totals">
+              <div class="title">Итого</div>
+              <div>#summ_chart#</div>
+              <div>#summ_pre#</div>
+              <div>#summ_cur#</div>
+              <div>#summ_over#</div>
+            </div>
+          </div>
+          <div class="scroll row">
+            <div class="info">
+              <div class="title">#date#</div>
+              <div>#summ_chart#</div>
+              <div>#summ_pre#</div>
+              <div>#summ_cur#</div>
+              <div>#summ_over#</div>
+            </div>
+          </div>
+        </div>
+        <div class="loader">
+          <div class="loader icon"></div>
+          <div class="text">Пожалуйста, подождите</div>
+        </div>
+      </div>
+    </div>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/table.js"></script>
+    <script src="index.js"></script>
+
+  </body>
+</html>

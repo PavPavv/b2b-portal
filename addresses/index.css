@@ -1,0 +1,273 @@
+.basic.btn{
+  width: 100%;
+}
+
+.mob-btns {
+  display: flex;
+}
+
+.mob-btns .question {
+  display: none;
+  margin-right: 0;
+}
+
+.shops-wrap {
+  display: flex;
+  /* width: 100%; */
+  padding-bottom: 3vw;
+}
+
+.shops {
+  display: block;
+  /* flex-direction: column; */
+  width: 440px;
+  min-width: 440px;
+  margin-right: 20px;
+  background: transparent;
+}
+
+.shops .wrap{
+  margin-top: 20px;
+}
+
+#map {
+  /* width: 70.83vw; */
+  width: 100%;
+  height: auto;
+}
+
+.shop {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #C6C6C6;
+  background: #ffffff;
+  transition: .2s;
+  cursor: pointer;
+}
+
+.shop:hover{
+  background: #E7EAED;;
+}
+
+.shop .inner{
+  justify-content: space-between;
+  padding: 0.7142em 1.4285em 0.7142em 2.1428em;
+}
+
+.shop .edit.icon{
+  width: 19px;
+  height: 19px;
+  background: url(../img/edit_address.svg) no-repeat;
+}
+
+.shop:hover .edit.icon{
+  width: 19px;
+  height: 19px;
+  background: url(../img/edit.svg) no-repeat;
+  background-size: contain;
+}
+
+.indicate {
+  display: flex;
+  align-items: center;
+  margin: 0 10px;
+}
+
+.indicate div{
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  background: #cccccc;
+}
+
+.indicate .approv {
+  fill: #3F9726;
+  background: #3F9726;
+}
+
+.indicate .denied {
+  fill: #D70C17;
+  background: #D70C17;
+}
+
+.indicate .process {
+  fill: #F69C00;
+  background: #F69C00;
+}
+
+.text-s{
+  font-size: 0.85em;
+  line-height: 1.4em;
+}
+
+.text-s.gray{
+  color: #8596A6;
+}
+
+.text-m{
+  line-height: 1.6em;
+}
+
+.shop a{
+  text-decoration: none;
+}
+
+.shop .name{
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.2em;
+}
+
+.shop img{
+  width: 115px;
+}
+
+.adding{
+  margin-top: 10px;
+  padding: 0.7142em 1.4285em 0.7142em 2.1428em;
+}
+
+.adding .row{
+  margin-top: 10px;
+}
+
+.time-status{
+  height: 19px;
+  padding-right: 15px;
+  border-right: 1px solid #C4C4C4;
+}
+
+.schedule{
+  width: 14.28em;
+  padding-left: 15px;
+}
+
+.time-info{
+  display: flex;
+  align-items: center;
+}
+
+.time-info .title {
+  margin-right: 5px;
+}
+
+.schedule .title{
+  color: #666666;
+}
+
+.time-block{
+  border-bottom: 1px solid #cccccc;
+}
+
+.time-block div:first-child{
+  width: 7.1428em;
+}
+
+.time-block div:last-child{
+  width: 5.71em;
+  margin-left: 1em;
+}
+
+#add-addrees{
+  width: 28em;
+}
+
+#sys-type{
+  width: 100%;
+}
+
+#add-addrees .download-area{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 4.78em;
+  height: 4.78em;
+  background: #EEEEEE;
+
+}
+
+#add-addrees .download.icon{
+  width: 1em;
+  height: 1em;
+  margin-right: 0;
+}
+
+.form-col2.download{
+  display: flex;
+  justify-content: flex-end;
+}
+
+#add-addrees input[data-type="tel"]{
+  width: 12.5em;
+}
+
+
+
+element.style {
+}
+@media (max-width: 960px)
+.shops {
+  display: flex;
+  order: 2;
+  /* flex-direction: column; */
+  width: 100%;
+  min-width: 440px;
+  margin-right: 0;
+}
+@media (max-width: 1400px)
+.shops {
+  width: 340px;
+  min-width: 340px;
+}
+.shops {
+  display: block;
+  /* flex-direction: column; */
+  width: 440px;
+  min-width: 440px;
+  margin-right: 20px;
+  background: transparent;
+}
+*, *::before, *::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+user agent stylesheet
+div {
+  display: block;
+}
+body {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding-top: 65px;
+  padding-bottom: 90px;
+  font-size: 1.4em;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  line-height: normal;
+  color: #666666;
+  background-color: #F2F2F2;
+  overscroll-behavior: contain;
+}
+html {
+  font-size: 10px;
+  overflow-x: hidden;
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  -ms-text-size-adjust: none;
+  text-size-adjust: none;
+}
+*, *::before, *::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+*, *::before, *::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+.main :not(.pop-up-container)::-webkit-scrollbar {
+  height: 0;
+}

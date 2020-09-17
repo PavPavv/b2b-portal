@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>ТОП СПОРТС - Сертификаты</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="ТОП СПОРТС">
+    <meta name="description" content="ТОП СПОРТС">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../js/check_auth.js"></script>
+    <link rel="icon" href="../img/top_sports_logo_black_short_transparency.png">
+    <link rel="stylesheet" type="text/css" href="../css/fonts.css">
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <link rel="stylesheet" type="text/css" href="../css/media_main.css">
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <link rel="stylesheet" type="text/css" href="media_index.css">
+    <!-- <link rel="stylesheet" type="text/css" href="media_index.css"> -->
+  </head>
+
+  <body data-website="ts_b2b" data-cart="true">
+
+    <div id="main">
+      <div class="container">
+        <div id="main-header" class="row">
+          <div class="title h0">Сертификаты</div>
+        </div>
+        <div class="cert-filters row">
+          <div id="cert-search-wrap">
+            <div class="title">Поиск по ключевым словам</div>
+            <form id="cert-search" class="search row">
+              <input type="text" data-value="" autocomplete="off" placeholder="Введите слово...">
+              <input class="search icon" type="submit" value="">
+              <div class="close icon"></div>
+            </form>
+          </div>
+          <div id="cert-date">
+            <div class="title">Период реализации</div>
+            <div class="form-wrap">
+              <input id="cert-range" type="text" value="" name="" data-type="range"  placeholder="ДД.ММ.ГГГГ - ДД.ММ.ГГГГ" maxlength="24">
+            </div>
+          </div>
+          <div id="cert-brand">
+            <div class="title">Бренд</div>
+            <div id="brands-select" class="activate select">
+              <div class="head row">
+                <div class="title">Выберите бренд</div>
+                <div class="triangle icon"></div>
+              </div>
+              <div class="drop-down">
+                <div class="item" data-value="default">Сбросить</div>
+                <div class="item" data-value="1">Значение 1</div>
+                <div class="item" data-value="2">Значение 2</div>
+                <div class="item" data-value="3">Значение 3</div>
+                <div class="item" data-value="4">Значение 4</div>
+                <div class="item" data-value="5">Значение 5</div>
+              </div>
+            </div>
+          </div>
+          <div class="relay icon" onclick="openPopUp('#certs-filters')"></div>
+        </div>
+        <div id="notice">По вашему запросу ничего не найдено</div>
+        <div id="cert-data" class="template">
+          <div class="item row">
+            <div class="view"></div>
+            <div class="cont">
+              <div class="text">#descr#</div>
+              <div class="row">
+                <a href="https://new.topsports.ru/api.php?action=files&type=cert&id=#id#" target="_blank">
+                  <div class="download icon"></div>
+                </a>
+                <a href="https://new.topsports.ru/api.php?action=files&type=cert&mode=view&id=#id#" target="_blank">#title#</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Модальное окно с фильтрацией -->
+    <div id="certs-filters" class="pop-up-container filters">
+      <div class="pop-up">
+        <div class="pop-up-title row">
+          <div class="title h2">Фильтры</div>
+          <div class="close icon"></div>
+        </div>
+        <div class="filter switch">
+          <div class="items switch-cont">
+            <div class="item">
+              <div class="row">
+                <form id="cert-search-mob" class="search row">
+                  <input type="text" data-value="" placeholder="Поиск по ключевым словам...">
+                  <input class="search icon" type="submit" value="">
+                  <div class="close icon"></div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="filter switch">
+          <div class="title row" onclick="switchContent(event)">
+            <div class="title white h3">Период реализации</div>
+            <div class="open white icon switch-icon"></div>
+          </div>
+          <div class="items switch-cont">
+            <div class="item">
+              <div class="row">
+                <input id="calendar" type="text" value="" name="" data-type="date" placeholder="ДД.ММ.ГГГГ" maxlength="10">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="filter switch">
+          <div class="filter switch popup-filter">
+            <div class="title row" onclick="switchContent(event)">
+              <div class="title white h3">По бренду</div>
+              <div class="open white icon switch-icon"></div>
+            </div>
+            <div class="items switch-cont">
+              <div class="item switch close">
+                <div class="row">
+                  <div class="title row">
+                    <div class="checkbox icon"></div>
+                    <div class="text">509</div>
+                  </div>
+                </div>
+              </div>
+              <div class="item switch close">
+                <div class="row">
+                  <div class="title row">
+                    <div class="checkbox icon"></div>
+                    <div class="text">Abom</div>
+                  </div>
+                </div>
+              </div>
+              <div class="item switch close">
+                <div class="row">
+                  <div class="title row">
+                    <div class="checkbox icon"></div>
+                    <div class="text">BCA</div>
+                  </div>
+                </div>
+              </div>
+              <div class="item switch close">
+                <div class="row">
+                  <div class="title row">
+                    <div class="checkbox icon"></div>
+                    <div class="text">EVS</div>
+                  </div>
+                </div>
+              </div>
+              <div class="item switch close">
+                <div class="row">
+                  <div class="title row">
+                    <div class="checkbox icon"></div>
+                    <div class="text">Helmetex</div>
+                  </div>
+                </div>
+              </div>
+              <div class="item switch close">
+                <div class="row">
+                  <div class="title row">
+                    <div class="checkbox icon"></div>
+                    <div class="text">Jethwear</div>
+                  </div>
+                </div>
+              </div>
+              <div class="item switch close">
+                <div class="row">
+                  <div class="title row">
+                    <div class="checkbox icon"></div>
+                    <div class="text">Ogio</div>
+                  </div>
+                </div>
+              </div>
+              <div class="item switch close">
+                <div class="row">
+                  <div class="title row">
+                    <div class="checkbox icon"></div>
+                    <div class="text">PowerTools</div>
+                  </div>
+                </div>
+              </div>
+              <div class="item switch close">
+                <div class="row">
+                  <div class="title row">
+                    <div class="checkbox icon"></div>
+                    <div class="text">SIXS</div>
+                  </div>
+                </div>
+              </div>
+              <div class="item switch close">
+                <div class="row">
+                  <div class="title row">
+                    <div class="checkbox icon"></div>
+                    <div class="text">Shark</div>
+                  </div>
+                </div>
+              </div>
+              <div class="item switch close">
+                <div class="row">
+                  <div class="title row">
+                    <div class="checkbox icon"></div>
+                    <div class="text">Spy Optic</div>
+                  </div>
+                </div>
+              </div>
+              <div class="item switch close">
+                <div class="row">
+                  <div class="title row">
+                    <div class="checkbox icon"></div>
+                    <div class="text">Tobe</div>
+                  </div>
+                </div>
+              </div>
+              <div class="item switch close">
+                <div class="row">
+                  <div class="title row">
+                    <div class="checkbox icon"></div>
+                    <div class="text">FXR</div>
+                  </div>
+                </div>
+              </div>
+              <div class="item switch close">
+                <div class="row">
+                  <div class="title row">
+                    <div class="checkbox icon"></div>
+                    <div class="text">FullT</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="btns-wrap">
+          <div class="btn act">Показать (<span>0</span>)</div>
+        </div>
+      </div>
+    </div>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/calendar.js"></script>
+    <script src="../js/table.js"></script>
+    <script src="../js/test.js"></script>
+    <script src="index.js"></script>
+
+  </body>
+</html>

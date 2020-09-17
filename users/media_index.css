@@ -1,0 +1,22 @@
+@media only screen and (max-width: 499px) {
+  .table-adaptive .content {
+    display: block;
+  }
+
+  .table-adaptive .content > div:last-child {
+    padding-left: 0;
+  }
+
+  #user .access {
+    display: flex;
+  }
+
+  #user .access .form-col2:first-child {
+    width: 40%;
+  }
+
+  #user .access .form-col2:last-child {
+    width: 60%;
+    padding-left: 1em;
+  }
+}

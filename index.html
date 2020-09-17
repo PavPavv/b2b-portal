@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ТОП СПОРТС</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="ТОП СПОРТС">
+    <meta name="description" content="ТОП СПОРТС">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="js/check_auth.js"></script>
+    <link rel="icon" href="img/top_sports_logo_black_short_transparency.png">
+    <link rel="stylesheet" type="text/css" href="css/fonts.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/media_main.css">
+  </head>
+
+  <body id="auth" data-website="ts_b2b">
+
+    <div id="main">
+      <div class="container center">
+        <!-- <div id="" class="pop-up-container"> -->
+          <div class="pop-up">
+            <div class="pop-up-title row" style="text-align: center;">
+              <div class="title h1">Вход в личный кабинет</div>
+              <!-- <div class="close icon"></div> -->
+            </div>
+            <div class="pop-up-body">
+              <div id="error" class="err">Пользователь не найден</div>
+              <form id="log-in" class="post">
+                <div class="form-wrap" required>
+                  <div class="title">Логин*</div>
+                  <input type="text" value="" name="login" placeholder="Введите логин">
+                  <div class="err">Поле не заполнено</div>
+                </div>
+                <div class="form-wrap" required>
+                  <div class="title">Пароль*</div>
+                  <input type="password" value="" name="pass" placeholder="Введите пароль">
+                  <div class="err">Поле не заполнено</div>
+                </div>
+                <div class="form-wrap">
+                  <div class="option row">
+                    <input type="checkbox" value="1" name="remember">
+                    <div class="checkbox orange icon"></div>
+                    <div>Запомнить меня</div>
+                  </div>
+                </div>
+                <div class="btns-wrap">
+                  <input class="btn act" type="submit" value="Войти" onclick="logIn(event)">
+                  <a href="registr/" class="btn sub-act">Стать дилером</a>
+                </div>
+                <div class="notice title">Если вы забыли логин или пароль обратитесь в отдел продаж<br>+7 (846) 300-44-99</div>
+              </form>
+            </div>
+            <div class="loader">
+              <div class="loader icon"></div>
+              <div class="text">Пожалуйста, подождите</div>
+            </div>
+          </div>
+        <!-- </div> -->
+      </div>
+    </div>
+
+    <script src ="js/main.js"></script>
+    <script src ="js/log_in.js"></script>
+
+  </body>
+</html>

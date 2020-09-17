@@ -1,0 +1,512 @@
+/* Стили шапки над таблицами */
+
+#order-info {
+  margin-bottom: 1.428em;
+}
+
+#order-info .row > .title {
+  flex-grow: 0;
+  flex-shrink: 0;
+  margin-right: 1em;
+}
+
+.btns .btn:first-child {
+  margin-right: 0.714em;
+}
+
+.up.row {
+  justify-content: space-between;
+  padding-bottom: 1em;
+}
+
+.info {
+  width: 100%;
+}
+
+.side:first-child {
+  margin-right: 2em;
+}
+
+.side .h3,
+.side .row {
+  margin-bottom: 0.357em;
+}
+
+.side:first-child .row > .title {
+  width: 7.5em;
+}
+
+.side:last-child .row > .title {
+  width: 13em;
+}
+
+.details {
+  align-items: flex-end;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+.details .btn {
+  width: 10em;
+  margin-bottom: 1em;
+}
+
+.details > .row {
+  justify-content: flex-end;
+  align-items: center;
+  width: fit-content;
+}
+
+.down.row {
+  justify-content: space-between;
+  border-top: 1px solid #C6C6C6;
+  padding-top: 1em;
+}
+
+.comment .title {
+  width: 7.5em;
+}
+
+/* Стили вкладок таблицы */
+
+.tabs .tab {
+  width: 12.143em;
+  height: 3.785em;
+  margin-right: 0.714em;
+  border-bottom: none;
+  border-radius: 3px 3px 0px 0px;
+}
+
+/* Стили для всех таблиц */
+
+.table-wrap .table {
+  max-height: 55vh;
+}
+
+.added .attention.icon {
+  background-image: url(../img/attention_red.svg);
+}
+
+/* Стили таблицы "Итого" */
+
+#nomen thead {
+  background-color: #91A0AE;
+}
+
+#nomen .table {
+  border: 1px solid #91A0AE;
+}
+
+#nomen td:nth-child(1) {
+  min-width: 8em;
+}
+
+#nomen td:nth-child(2) {
+  min-width: 10em;
+}
+
+#nomen td:nth-child(3) {
+  min-width: 10em;
+  text-align: right;
+}
+
+#nomen td:nth-child(4) {
+  min-width: 10em;
+  text-align: right;
+}
+
+#nomen td:nth-child(5) {
+  min-width: 10em;
+  text-align: right;
+}
+
+#nomen td:nth-child(6) {
+  min-width: 10em;
+  text-align: right;
+}
+
+/* Стили таблицы "В пути" */
+
+#vputi thead {
+  background-color: #6B99C2;
+}
+
+#vputi .table {
+  border: 1px solid #6B99C2;
+}
+
+#vputi td:nth-child(1) {
+  min-width: 8em;
+}
+
+#vputi td:nth-child(2) {
+  min-width: 10em;
+}
+
+#vputi td:nth-child(3) {
+  min-width: 14em;
+  text-align: center;
+}
+
+#vputi td:nth-child(4) {
+  min-width: 10em;
+  text-align: right;
+}
+
+#vputi td:nth-child(5) {
+  min-width: 12em;
+  text-align: right;
+}
+
+#vputi td:nth-child(6) {
+  min-width: 12em;
+  text-align: right;
+}
+
+/* Стили таблицы "В наличии" */
+
+#vnali thead {
+  background-color: #F9BA4D;
+}
+
+#vnali .table {
+  border: 1px solid #F9BA4D;
+}
+
+#vnali td:nth-child(1) {
+  min-width: 8em;
+}
+
+#vnali td:nth-child(2) {
+  min-width: 10em;
+}
+
+#vnali td:nth-child(3) {
+  min-width: 10em;
+  text-align: right;
+}
+
+#vnali td:nth-child(4) {
+  min-width: 10em;
+  text-align: right;
+}
+
+#vnali td:nth-child(5) {
+  min-width: 10em;
+  text-align: right;
+}
+
+#vnali td:nth-child(6) {
+  min-width: 10em;
+  text-align: right;
+}
+
+/* Стили таблицы "Собран" */
+
+#sobrn thead {
+  background-color: #9882A0;
+}
+
+#sobrn .table {
+  border: 1px solid #9882A0;
+}
+
+#sobrn td:nth-child(1) {
+  min-width: 8em;
+}
+
+#sobrn td:nth-child(2) {
+  min-width: 10em;
+}
+
+#sobrn td:nth-child(3) {
+  min-width: 10em;
+  text-align: right;
+}
+
+#sobrn td:nth-child(4) {
+  min-width: 10em;
+  text-align: right;
+}
+
+#sobrn td:nth-child(5) {
+  min-width: 10em;
+  text-align: right;
+}
+
+#sobrn td:nth-child(6) {
+  min-width: 10em;
+  text-align: right;
+}
+
+/* Стили таблицы "Отгружен" */
+
+#otgrz thead {
+  background-color: #79B667;
+}
+
+#otgrz .table {
+  border: 1px solid #79B667;
+}
+
+#otgrz td:nth-child(1) {
+  min-width: 8em;
+}
+
+#otgrz td:nth-child(2) {
+  min-width: 10em;
+}
+
+#otgrz td:nth-child(3) {
+  min-width: 10em;
+  text-align: right;
+}
+
+#otgrz td:nth-child(4) {
+  min-width: 10em;
+  padding-top: 0;
+  padding-bottom: 0;
+  vertical-align: middle;
+  text-align: right;
+}
+
+#otgrz td:nth-child(4) .row {
+  justify-content: flex-end;
+  align-items: center;
+}
+
+#otgrz td:nth-child(4) .icon {
+  width: 26px;
+  height: 26px;
+}
+
+#otgrz td:nth-child(5) {
+  min-width: 10em;
+  text-align: right;
+}
+
+#otgrz td:nth-child(6) {
+  min-width: 10em;
+  text-align: right;
+}
+
+/* Стили таблицы "Непоставка" */
+
+#nedop thead {
+  background-color: #91A0AE;
+}
+
+#nedop .table {
+  border: 1px solid #91A0AE;
+}
+
+#nedop td:nth-child(1) {
+  min-width: 8em;
+}
+
+#nedop td:nth-child(2) {
+  min-width: 10em;
+}
+
+#nedop td:nth-child(3) {
+  min-width: 10em;
+  text-align: right;
+}
+
+#nedop td:nth-child(4) {
+  min-width: 10em;
+  text-align: right;
+}
+
+#nedop td:nth-child(5) {
+  min-width: 10em;
+  text-align: right;
+}
+
+#nedop td:nth-child(6) {
+  min-width: 10em;
+  text-align: right;
+}
+
+/* Стили таблицы "Рекламации" */
+
+#reclm thead {
+  background-color: #91A0AE;
+}
+
+#reclm .table {
+  border: 1px solid #91A0AE;
+}
+
+#reclm td:nth-child(1) {
+  min-width: 10em;
+}
+
+#reclm td:nth-child(2) {
+  min-width: 10em;
+  text-align: center;
+}
+
+#reclm td:nth-child(3) {
+  min-width: 8em;
+}
+
+#reclm td:nth-child(4) {
+  min-width: 10em;
+}
+
+#reclm td:nth-child(5) {
+  min-width: 10em;
+  text-align: right;
+}
+
+#reclm td:nth-child(6) {
+  min-width: 10em;
+  text-align: right;
+}
+
+#reclm td:nth-child(7) {
+  min-width: 10em;
+  text-align: right;
+}
+
+#reclm td:nth-child(8) {
+  min-width: 10em;
+  text-align: center;
+}
+
+/* =====================================================================================================
+Всплывающее окно рекламаций:
+===================================================================================================== */
+
+#make-reclm .pop-up {
+  width: 47em;
+}
+
+#make-reclm .order-info {
+  margin-bottom: 1.428em;
+}
+
+#make-reclm .order-info > div:first-child {
+  margin-bottom: 0.714em;
+}
+
+#make-reclm .img-wrap {
+  width: 10em;
+  height: 10em;
+}
+
+#make-reclm img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+#make-reclm textarea {
+  height: 5.5em;
+}
+
+/* =====================================================================================================
+Всплывающее окно отгрузок:
+===================================================================================================== */
+
+#shipment .pop-up {
+  min-width: 56em;
+}
+
+#shipment table {
+  min-width: 100%;
+  max-width: 100%;
+  color: #666666;
+  font-weight: 400;
+  background-color: #FFFFFF;
+  border-collapse: collapse;
+  border: none;
+  border-spacing: 0;
+  text-align: left;
+  direction: ltr;
+  overflow: hidden;
+}
+
+#shipment thead {
+  background-color: #EEEEEE;
+}
+
+#shipment th,
+#shipment td {
+  padding: 0.75em 1.14em;
+  font-weight: 400;
+  border-bottom: 1px solid #D5D5D5;
+}
+
+#shipment th {
+  text-align: center;
+}
+
+#shipment .icon {
+  margin-right: 0.5em;
+}
+
+#shipment td:nth-child(2),
+#shipment td:nth-child(3),
+#shipment td:nth-child(4) {
+  white-space: nowrap;
+}
+
+#shipment td:nth-child(1) .row {
+  color: #666666;
+  text-decoration: none;
+}
+
+#shipment td:nth-child(2) .row {
+  justify-content: center;
+}
+
+#shipment td:nth-child(3) {
+  text-align: right;
+}
+
+/* =====================================================================================================
+Всплывающее окно платежей:
+===================================================================================================== */
+
+#payment .scroll {
+  overflow-y: auto;
+}
+
+#payment .scroll::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+#payment .scroll::-webkit-scrollbar-track {
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 1px solid #C6C6C6;
+  border-radius: 19px;
+}
+
+#payment .scroll::-webkit-scrollbar-thumb {
+  background-color: #C6C6C6;
+  border: 1px solid #C6C6C6;
+  border-radius: 19px;
+  cursor: pointer;
+}
+
+#payment .scroll::-webkit-scrollbar-corner {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+#payment .pop-up-body > div > div > div {
+  padding: 0.75em 1.14em;
+  background-color: #FFFFFF;
+  border-bottom: 1px solid #D5D5D5;
+  white-space: nowrap;
+}
+
+#payment .pop-up-body > div > div > .title {
+  background-color: #EEEEEE;
+  text-align: center;
+}
+
+#payment .pop-up-body > div > div:not(:first-child) > div:not(.title) {
+  text-align: right;
+}

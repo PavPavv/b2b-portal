@@ -1,0 +1,98 @@
+/* Стили для таблицы */
+
+#users-table td:nth-child(1) {
+  min-width: 6em;
+  padding-top: 0;
+  padding-bottom: 0;
+  line-height: 0;
+  vertical-align: middle;
+  text-align: center;
+}
+
+#users-table td:nth-child(2) {
+  min-width: 20em;
+}
+
+#users-table td:nth-child(3) {
+  min-width: 8em;
+}
+
+#users-table td:nth-child(4) {
+  min-width: 12em;
+  text-align: center;
+}
+
+#users-table td:nth-child(5) {
+  min-width: 12em;
+}
+
+#users-table td:nth-child(6) {
+  min-width: 12em;
+}
+
+#users-table td:nth-child(7) {
+  min-width: 12em;
+  padding-top: 0;
+  padding-bottom: 0;
+  line-height: 0;
+  vertical-align: middle;
+  text-align: center;
+}
+
+#users-table td:nth-child(8) {
+  min-width: 12em;
+  text-align: center;
+}
+
+#users-table td:nth-child(9) {
+  min-width: 10em;
+  text-align: center;
+}
+
+#users-table td:nth-child(10) {
+  min-width: 10em;
+  padding-top: 0;
+  padding-bottom: 0;
+  line-height: 0;
+  vertical-align: middle;
+  text-align: center;
+}
+
+/* Блоки информации */
+
+.infoblock .lock.icon {
+  margin-right: 1em;
+  margin-top: 4px;
+}
+
+.infoblock .edit.icon {
+  margin-right: 0;
+  margin-left: 1em;
+}
+
+.infoblock .wrap,
+.infoblock .content {
+  width: 100%;
+}
+
+.infoblock .content > div {
+  min-width: 50%;
+}
+
+.infoblock .content > div:last-child {
+  padding-left: 1em;
+}
+
+/* Модальное окно */
+
+#user .pop-up {
+  width: 40em;
+}
+
+#user .text.midlight {
+  font-size: 0.857em;
+}
+
+#user .access .title {
+  margin-bottom: 0.35em;
+}
