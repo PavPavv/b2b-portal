@@ -30,4 +30,4 @@ in the browser's console and jump to that page.
   - snow (old page, not actually working)
   - users
 
-Each proper page has index.html, index.css, index.js. Sometimes also it has media_index.css.
+Each proper page has *index.html*, *index.css*, *index.js*. Sometimes also it has *media_index.css*.
