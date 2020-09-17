@@ -8,7 +8,7 @@ To start project run it at a local server (there are many AJAX requests and test
 There is no connection with server or auth services, so you can simply type needing page
 in the browser's console and jump to that page.
 
-###Structure
+### Structure
 
 - index.html
 - err404.html
